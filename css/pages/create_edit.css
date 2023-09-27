@@ -1,0 +1,92 @@
+.ancho{
+  width: 90%;
+}
+.categoria-licencia{
+  display: flex;
+  justify-content: space-between;
+}
+.categoria-licencia select{
+  width: 30%;
+  border-radius: 0.6rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.categoria-licencia label,.datos-form label,.datos-form input{
+  font-weight: 300;
+  font-size: var(--font-large);
+  letter-spacing: 0.04em;
+  color: var(--font-black);
+}
+.datos-form label{
+  font-weight: 400;
+}
+.datos-form input{
+  font-weight: 400;
+  font-size: var(--font-medium);
+  border:none;
+  border-bottom: var(--primary-solid) solid 2px;
+}
+
+.nom_product{
+  width:50%;
+}
+
+.sector-sku-descuento{
+  margin-bottom: var(--spacing-60);
+  width: 100%;
+}
+.margin-sku input{
+  margin-right: var(--spacing-60);
+}
+.margin-descuento input{
+  margin-right: var(--spacing-24);
+}
+input[type="file"]{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: var(--font-xsmall);
+  letter-spacing: 0.04em;
+  color:var(--dark-solid);
+  border:none;
+}
+textarea{
+  width: 100%;
+  font-weight: 400;
+  font-size: var(--font-large);
+  letter-spacing: 0.04em;
+  color: var(--dark-solid);
+}
+.center{ /* clase para poner los inputs de stock y descuento centrado*/
+  text-align: center;
+}
+
+.edit-imagenes picture{
+  display:flex;
+}
+
+.edit-imagenes img{
+  width: 15rem;
+  border-bottom: var(--primary-solid) solid 1px;
+}
+.edit-margen-imagenes{
+  margin-right: var(--spacing-24);
+}
+figcaption{
+  font-family: var(--alternative-font);
+  font-weight: 500;
+  font-size: var(--font-medium);
+  color: var(--font-black);
+  text-align: center;
+}
+.button-create-edit button{
+  background-color: var(--primary-solid);
+  border: none;
+  font-weight: 600;
+  font-size: var(--font-xsmall);
+  color: var(--light-font-solid);
+  padding: var(--spacing-12) var(--spacing-28);
+  margin-right: var(--spacing-36);
+}

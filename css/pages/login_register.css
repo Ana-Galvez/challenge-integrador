@@ -1,0 +1,97 @@
+#main__login,
+#main-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--spacing-36) 0;
+}
+
+#main__login__form,
+#main__register__form {
+  display: flex;
+  flex-direction: column;
+  /* border: blue solid 2px; */
+  width: 35%;
+}
+#main__register__subtitle {
+  font-family: var(--alternative-font);
+  font-weight: 500;
+  font-size: var(--font-xlarge);
+  color: var(--dark-solid);
+  margin-bottom: var(--spacing-28);
+  letter-spacing: 0.04em;
+}
+
+.main__datos-form {
+  margin-bottom: var(--spacing-28);
+}
+
+.main__datos-form label {
+  font-weight: 400;
+  font-size: var(--font-large);
+  color: var(--font-black);
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.spacing-form {
+  margin-bottom: var(--spacing-36);
+}
+
+.main__datos-form input {
+  border: none;
+  font-weight: 400;
+  font-size: var(--font-small);
+  letter-spacing: 0.04em;
+  color: #b9b9b9;
+  border-bottom: var(--primary-solid) solid 2px;
+  float: right;
+}
+
+#main__buttonolvidar,
+#main__buttonregistrar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.main__buttoncheck {
+  margin-bottom: var(--spacing-24);
+}
+
+#button__login,
+#button__register {
+  background-color: var(--primary-solid);
+  border: none;
+  font-weight: 400;
+  font-size: var(--font-small);
+  color: var(--light-font-solid);
+  padding: var(--spacing-12) var(--spacing-28);
+  margin-right: var(--spacing-36);
+}
+
+.main__buttoncheck label {
+  align-items: center;
+  font-weight: 400;
+  font-size: var(--font-medium);
+  color: var(--dark-solid);
+  padding-left: var(--spacing-8);
+}
+
+#check {
+  border: var(--dark-solid) solid 2px;
+  border-radius: 3px;
+  padding-left: var(--spacing-36);
+}
+
+#olvidar_pass {
+  font-weight: 400;
+  font-size: var(--font-xsmall);
+  color: var(--secondary-solid);
+}
+
+#condiciones {
+  font-weight: 400;
+  color: var(--secondary-solid);
+}

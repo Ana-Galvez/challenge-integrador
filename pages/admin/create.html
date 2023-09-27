@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>CREATE | FUNKOSHOP</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <picture class="navbar__logo">
+        <a href="/index.html">
+          <img
+            src="/img/branding/logo_light_horizontal.svg"
+            alt="Isologotipo de la Marca Funkoshop"
+          />
+        </a>
+      </picture>
+      <ul class="navbar__menu">
+        <li class="navbar__item"><a class="navbar__link" href="/pages/shop.html">VER TIENDA</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="admin.html">ADMIN</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="/pages/shop.html">SALIR</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="container margenes-arriba-abajo36 ancho" id="main-create">
+    <h1 class="admin-title">CREAR NUEVO ITEM</h1>
+    <form action="">
+      <section class="categoria-licencia spacing-36">
+        <label for="categoria">Categoría: </label>
+        <select name="categoria" id="categoria">
+          <option disabled selected>Seleccionar</option>
+          <option>Figuras Coleccionables</option>
+          <option>Remeras</option>
+          <option>Llaveros</option>
+        </select>
+        <label for="licencia">Licencia: </label>
+        <select name="licencia" id="licencia">
+          <option disabled selected>Seleccionar</option>
+          <option>Naruto Shippuden</option>
+          <option>Naruto Shippuden</option>
+          <option>Naruto Shippuden</option>
+        </select>
+      </section>
+      <div class="datos-form">
+        <!-- HAY QUE VER QUE EL INPUT SE AJUSTE AL CONTENIDO -->
+        <section class="spacing-36">
+          <label for="nombre_producto">Nombre del producto: </label>
+          <input class="nom_product" type="text" name="nombre_producto" id="nombre_producto" placeholder="Kakashi Hatake Shippuden Saga">
+        </section>
+        <section class="spacing-36">
+          <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"
+            placeholder="Descripción del producto"></textarea>
+        </section>
+        <section class="sector-sku-descuento margin-sku">
+          <label for="sku">SKU: </label>
+          <input type="text" name="sku" id="sku" placeholder="SSK111AB001" size="12">
+          <label for="precio">Precio: </label>
+          <input type="text" name="precio" id="precio" placeholder="$ 0.000,00" size="12">
+          <label for="stock">Stock: </label>
+          <input  class="center" type="text" name="stock" id="stock" placeholder="0" size="5">
+        </section>
+        <section class="sector-sku-descuento margin-descuento">
+          <label for="descuento">Descuento: </label>
+          <input class="center" type="text" name="descuento" id="descuento" placeholder="0%" size="5">
+          <label for="cuotas">Cuotas: </label>
+          <select name="cuotas" id="cuotas">
+            <option>Sin cuotas</option>
+            <option>3 Cuotas sin interés</option>
+            <option>6 Cuotas sin interés</option>
+            <option>9 Cuotas sin interés</option>
+            <option>12 Cuotas sin interés</option>
+          </select>
+        </section>
+        <section class="spacing-36">
+          <label for="imagenes">Imágenes: </label>
+          <input type="file" name="imagenes" id="imagenes">
+        </section>
+      </div>
+      <section class="button-create-edit">
+        <button type="submit">Agregar Producto</button>
+        <button type="reset">Limpiar</button>
+      </section>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <nav class="navbar container">
+      <ul class="navbar__item">
+        <li class="navbar__item"><a class="navbar__link" href="/pages/shop.html">SHOP</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="/pages/contact.html">CONTACTO</a></li>
+      </ul>
+      <picture>
+        <img src="/img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
+      </picture>
+    </nav>
+    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+  </footer>
+</body>
+</html>

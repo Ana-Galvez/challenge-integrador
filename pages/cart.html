@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>CARRITO | FUNKOSHOP</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <picture class="navbar__logo">
+        <a href="../index.html">
+          <img src="../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop" />
+        </a>
+      </picture>
+      <ul class="navbar__menu">
+        <li class="navbar__item with-submenu"><a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+          <ul class="submenu">
+            <li class="submenu__item"><a href="#" class="submenu__link">Funkos</a></li>
+            <li class="submenu__item"><a href="#" class="submenu__link">Remeras</a></li>
+            <li class="submenu__item"><a href="#" class="submenu__link">Llaveros</a></li>
+          </ul>
+        </li>
+        <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="admin/login.html">LOGIN</a></li>
+        <li class="navbar__item"><a class="navbar__cart" href="cart.html"><img src="../img/icons/cart-icon.svg" alt="icono de carrito"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart__main container">
+    <h1 class="cart__title">CARRITO DE COMPRAS</h1>
+    <section class="cart__table">
+      <div class="cart__table__head border-backcolor-header">
+          <h2 class="cart__table__head--title">DETALLE DE PRODUCTO</th>
+          <h2 class="cart__table__head--title--cant">CANTIDAD</th>
+          <h2 class="cart__table__head--title--total">TOTAL</th>
+      </div>
+      
+      <section class="cart__table__body">
+        
+           <section class="cart__table__td-image spacing-36">
+            <div class="cart__table__td-container">
+              <picture>
+                <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+              </picture>
+              <div class="cart__table__td-image-description">
+                <p class="cart__table__td-image-description-name">BABY YODA BLUEBALL</p>
+                <p class="cart__table__td-image-description-licence">STAR WARS</p>
+                <p class="cart__table__td-image-description-price">precio unitario: $ <span id="cart_precio_unitario">1799.99</span></p>
+              </div>
+            </div>
+
+            <div class="cart__table__td-number">
+              <input type="text" name="cantidad" id="cart_cantidad" placeholder="0" value="0" disabled>
+              <div class="btn-cant">
+                <button class="cart__quantity" id="cart_add" type="button">+</button>
+                <button class="cart__quantity" id="cart_subtract" type="button">-</button>
+              </div>
+            </div>
+            <div class="cart__table__td-totalprice">$ <span id="cart_precio_total_producto">3599.98</span></div>
+            <div class="cart__table__td-delete"><iconify-icon icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
+          </section>
+        
+          <section class="cart__table__td-image">
+            <div class="cart__table__td-container">
+              <picture>
+                <img src="../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
+              </picture>
+              <div class="cart__table__td-image-description">
+                <p class="cart__table__td-image-description-name">PIDGEOTTO</p>
+                <p class="cart__table__td-image-description-licence">POKEMON</p>
+                <p class="cart__table__td-image-description-price">precio unitario: $ 1799,99</p>
+              </div>
+          </div>
+
+          <div class="cart__table__td-number">
+            <input type="text" name="cantidad" id="cart__cantidad1" placeholder="0">
+            <div class="btn-cant">
+              <button class="cart__quantity" type="button">+</button>
+              <button class="cart__quantity" type="button">-</button>
+            </div>
+          </div>
+          
+          <div class="cart__table__td-totalprice">$ 1799,99</div>
+          <div class="cart__table__td-delete"><iconify-icon icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
+        </section>
+      </section>
+    </section>
+
+    <section class="cart__resumen">
+      <h2 class="cart__resumen__title">RESUMEN</h2>
+      <table class="cart__resumen__table border-backcolor-header">
+        <tbody class="cart__resumen__body">
+          <tr>
+            <td class="cart__resumen__table__title">CANTIDAD DE ELEMENTOS</td>
+            <td class="cart__resumen__table__number" id="cart_cant_elementos"></td>
+          </tr>
+          <tr>
+            <td class="cart__resumen__table__title">SUBTOTAL</td>
+            <td class="cart__resumen__table__number">$ <span id="cart_subtotal"></span></td>
+          </tr>
+          <tr>
+            <td class="cart__resumen__table__title">ENVIO</td>
+            <td class="cart__resumen__table__number">$ <span id="cart_envio"></span>0.00</td>
+          </tr>
+          <tr>
+            <td class="cart__resumen__table__title-total">TOTAL</td>
+            <td class="cart__resumen__table__number-total">$ <span id="cart_precio_total"></span></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <button class="pagar"><a href="#">IR A PAGAR</a></button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <nav class="navbar container">
+      <ul class="navbar__item">
+        <li class="navbar__item"><a class="navbar__link" href="shop.html">SHOP</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="admin/login.html">INGRESAR</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
+      </ul>
+      <picture>
+        <img src="../img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
+      </picture>
+    </nav>
+  <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+</html>

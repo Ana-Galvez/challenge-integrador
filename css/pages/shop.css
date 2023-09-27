@@ -1,0 +1,101 @@
+/* FORMULARIO */
+.shop__aside--main {
+  display: flex;
+}
+
+.shop__aside {
+  display: flex;
+  margin: var(--spacing-68) auto;
+  height: min-content;
+  max-width: 70%;
+}
+
+.shop__aside--parts {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--spacing-28);
+}
+
+.shop__aside--label {
+  font-size: var(--font-large);
+  font-weight: 500;
+  color: var(--dark-font-solid);
+}
+
+.shop__aside--parts--precio--minymax label {
+  font-weight: 500;
+  color: var(--dark-font-solid);
+  font-size: var(--font-small);
+}
+
+.shop__aside--parts--precio--minymax {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.shop__aside--parts--precio--minymax input {
+  width: 30%;
+}
+
+.show__input,
+select {
+  border-radius: 6px;
+  border: var(--dark-bg-solid) solid 2px;
+}
+
+.input-precio {
+  text-align: center;
+}
+
+.shop__aside--parts--precio--checkbox {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: var(--spacing-8);
+}
+
+.shop__aside--parts--precio--checkbox label {
+  font-weight: 500;
+  color: var(--dark-font-solid);
+  font-size: var(--font-medium);
+}
+
+/* MAIN */
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.shop__main--pages {
+  display: flex;
+  justify-content: center;
+}
+
+.shop__main--pages--items {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-8);
+  height: 4.4rem;
+  width: 35.6rem;
+  font-size: var(--font-small);
+  font-weight: 700;
+  color: #212b36;
+  margin-bottom: var(--spacing-68);
+}
+
+.shop__main--pages--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: #dfe3e8 solid 1px;
+  border-radius: 4px;
+  background-color: var(--light-font-solid);
+  width: 4.4rem;
+}
+
+/* FALTA VER COLOR DEL NÚMERO Y COLOR DEL BORDE AL ESTAR EN ESA PÁGINA   color:var(--primary-solid: #FF3333) border: var(--primary-solid: #FF3333) solid 1px */
+
+/* FALTA VER EL COLOR DE FONDO DE LAS FLECHAS AL LLEGAR A LA PRIMERA Y ÚLTIMA PÁGINA  #919EAB */
+.shop__arrow {
+  color: #dfe3e8;
+}

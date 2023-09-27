@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--base-font);
+  font-size: 62.5%;
+  color: var(--dark-solid);
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  /* font-size: 2em; */
+  font-family: inherit;
+  color: inherit;
+}
+
+header,
+footer {
+  color: var(--light-font-solid);
+  font-family: var(--alternative-font);
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+p {
+  font-size: var(--font-medium);
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.margenes-arriba-abajo36{
+  margin-top: var(--spacing-36);
+  margin-bottom: var(--spacing-36);
+}

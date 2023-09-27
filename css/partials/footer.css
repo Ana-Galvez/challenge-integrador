@@ -1,0 +1,10 @@
+.footer {
+  background-color: var(--dark-bg-solid);
+  padding: var(--spacing-68);
+  margin-top: auto;
+}
+
+.footer__copy {
+  text-align: center;
+  margin-top: var(--spacing-36);
+}
