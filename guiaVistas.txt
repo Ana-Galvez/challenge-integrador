@@ -5,7 +5,7 @@ adminAdmin - Anto
 adminRegister - Daniel
 adminEdit - Maca
 tiendaCarrito - Ana
-adminLogin - Edu
+adminLogin - Edu (subjefe)
 tiendaShop - Axel
 adminCreate - Cel
 tiendaHome - Ana
