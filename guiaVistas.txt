@@ -1,0 +1,12 @@
+Project Manager - Ana
+
+tiendaItem - Seba
+adminAdmin - Anto
+adminRegister - Daniel
+adminEdit - Maca
+tiendaCarrito - Ana
+adminLogin - Edu
+tiendaShop - Axel
+adminCreate - Cel
+tiendaHome - Ana
+
