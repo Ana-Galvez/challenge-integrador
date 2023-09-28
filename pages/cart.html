@@ -40,7 +40,7 @@
       
       <section class="cart__table__body">
         
-           <section class="cart__table__td-image spacing-36">
+           <section class="cart__table__td-image spacing-36" id="cart_div_cada_producto">
             <div class="cart__table__td-container">
               <picture>
                 <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
@@ -53,14 +53,14 @@
             </div>
 
             <div class="cart__table__td-number">
-              <input type="text" name="cantidad" id="cart_cantidad" placeholder="0" value="0" disabled>
+              <input type="text" name="cantidad" id="cart_cantidad" placeholder="0" value="3" disabled>
               <div class="btn-cant">
                 <button class="cart__quantity" id="cart_add" type="button">+</button>
                 <button class="cart__quantity" id="cart_subtract" type="button">-</button>
               </div>
             </div>
             <div class="cart__table__td-totalprice">$ <span id="cart_precio_total_producto">3599.98</span></div>
-            <div class="cart__table__td-delete"><iconify-icon icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
+            <div class="cart__table__td-delete"><iconify-icon id="cart_eliminar" icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
           </section>
         
           <section class="cart__table__td-image">

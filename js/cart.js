@@ -1,27 +1,51 @@
-const addCart = document.getElementById('cart_add');
-const subtractCart = document.getElementById('cart_subtract');
-const cantidadCart = document.getElementById('cart_cantidad');
-const precioUnitario = document.getElementById('cart_precio_unitario');
-const precioTotalProducto = document.getElementById('cart_precio_total_producto');
+// RESUMEN
 
-const cantElementos = document.getElementById('cart_cant_elementos')
-const subtotal = document.getElementById('cart_subtotal')
-const envio = document.getElementById('cart_envio')
-const precioTotal = document.getElementById('cart_precio_total')
+const divCadaProducto = document.querySelector('#cart_div_cada_producto');
+const precioUnitario = document.querySelector('#cart_precio_unitario');
+const cantProductos = document.querySelector('#cart_cantidad'); //input cantidad
+const add = document.querySelector('#cart_add');
+const subtract = document.querySelector('#cart_subtract');
+const precio_produc = document.querySelector('#cart_precio_total_producto'); //total de cada producto
+const borrar = document.querySelector('#cart_eliminar');
+const cantProductosResumen = document.querySelector('#cart_cant_elementos');
+const subtotalResumen = document.querySelector('#cart_subtotal');
+const envio = document.querySelector('#cart_envio');
+const totalResumen = document.querySelector('#cart_precio_total');
 
-console.log(precioTotalProducto.textContent);
+//Función que al cargar la página, muestre la cantidad de cada producto y los datos en resumen
+window.addEventListener('load', () => {
+  precio_produc.textContent=Number(precioUnitario.textContent) * Number(cantProductos.value);
+  cantProductosResumen.textContent = Number(cantProductos.value);
+  subtotalResumen.textContent = Number(precio_produc.textContent);
+  totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+});
 
-// AGREGAR O RESTAR CANTIDAD DE PRODUCTO
-addCart.addEventListener('click', () => cantidadCart.value = Number(cantidadCart.value) + 1);
-subtractCart.addEventListener('click', () => {
-  if (cantidadCart.value <= 0){
-    cantidadCart.value = 0;
+//Función para que anden los botones para agregar o restar cantidad de productos
+add.addEventListener('click', () => {
+  cantProductos.value = Number(cantProductos.value) + 1;
+  precio_produc.textContent = Number(precioUnitario.textContent) * Number(cantProductos.value);
+  cantProductosResumen.textContent = Number(cantProductos.value);
+  subtotalResumen.textContent = Number(precio_produc.textContent);
+  totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+});
+
+subtract.addEventListener('click', () => {
+  if (cantProductos.value <= 0){
+    cantProductos.value = 0;
   } else {
-    cantidadCart.value = Number(cantidadCart.value) - 1;
+    cantProductos.value = Number(cantProductos.value) - 1;
+    precio_produc.textContent = Number(precioUnitario.textContent) * Number(cantProductos.value);
+    cantProductosResumen.textContent = Number(cantProductos.value);
+    subtotalResumen.textContent = Number(precio_produc.textContent);
+    totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
   } 
 });
 
-// AL CARGAR LA PÁGINA SE PONEN TODOS LOS DATOS
-window.addEventListener('click', () => {
-  precioTotalProducto.textContent = Number(cantidadCart.value) * Number(precioUnitario.textContent);
-});
+borrar.addEventListener('click', () => {
+  divCadaProducto.remove();
+  // ver para que se cambie lo de resumen
+  // cantProductosResumen.textContent = Number(cantProductos.value);
+  // subtotalResumen.textContent = Number(precio_produc.textContent);
+  // totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+})
+
