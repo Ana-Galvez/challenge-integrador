@@ -1,3 +1,27 @@
+/* Contador de productos en el header */
+#carrito_contador{
+  position: relative; 
+}
+.count-products{
+  position:absolute;
+  /* visibility:hidden; */
+  left:75%;
+  bottom:65%;
+  background-color: var(--primary-solid);
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: var(--light-font-solid);
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
 .cart__main {
   padding: var(--spacing-128) 0;
 }

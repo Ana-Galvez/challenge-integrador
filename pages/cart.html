@@ -24,7 +24,12 @@
         </li>
         <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
         <li class="navbar__item"><a class="navbar__link" href="admin/login.html">LOGIN</a></li>
-        <li class="navbar__item"><a class="navbar__cart" href="cart.html"><img src="../img/icons/cart-icon.svg" alt="icono de carrito"></a></li>
+        <div id="carrito_contador">
+          <li class="navbar__item"><a class="navbar__cart" href="cart.html"><img src="../img/icons/cart-icon.svg" alt="icono de carrito"></a></li>
+          <div class="count-products">
+            <span id="contador-productos">0</span>
+          </div>
+        </div>
       </ul>
     </nav>
   </header>
@@ -53,7 +58,7 @@
             </div>
 
             <div class="cart__table__td-number">
-              <input type="text" name="cantidad" id="cart_cantidad" placeholder="0" value="3" disabled>
+              <input type="text" name="cantidad" id="cart_cantidad" placeholder="0" value="1" disabled>
               <div class="btn-cant">
                 <button class="cart__quantity" id="cart_add" type="button">+</button>
                 <button class="cart__quantity" id="cart_subtract" type="button">-</button>
