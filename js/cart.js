@@ -1,6 +1,6 @@
 import { addCantProducts, subtractCantProducts } from "./add-subtract.js";
+import { dataResumen } from "./cart-resumen.js";
 
-const divContadorHeader =document.querySelector('.count-products')
 const contadorHeader = document.querySelector('#contador-productos');
 const divCadaProducto = document.querySelector('#cart_div_cada_producto');
 const precioUnitario = document.querySelector('#cart_precio_unitario');
@@ -17,10 +17,7 @@ const totalResumen = document.querySelector('#cart_precio_total');
 //Función que al cargar la página, muestre la cantidad de cada producto y los datos en resumen
 window.addEventListener('load', () => {
   contadorHeader.textContent = cantProductos.value;
-  precio_produc.textContent=Number(precioUnitario.textContent) * Number(cantProductos.value);
-  cantProductosResumen.textContent = Number(cantProductos.value);
-  subtotalResumen.textContent = Number(precio_produc.textContent);
-  totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+  dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
 });
 
 
@@ -36,25 +33,16 @@ subtract.addEventListener('click', () => {
 //Función para que cambien los datos al agregar o restar cantidad de producto
 add.addEventListener('click', () => {
   contadorHeader.textContent = cantProductos.value;
-  precio_produc.textContent = Number(precioUnitario.textContent) * Number(cantProductos.value);
-  cantProductosResumen.textContent = Number(cantProductos.value);
-  subtotalResumen.textContent = Number(precio_produc.textContent);
-  totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+  dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
 });
 
 subtract.addEventListener('click', () => {
   contadorHeader.textContent = cantProductos.value;
   if (cantProductos.value <= 0){
     cantProductos.value = 0;
-    precio_produc.textContent = Number(precioUnitario.textContent) * Number(cantProductos.value);
-    cantProductosResumen.textContent = Number(cantProductos.value);
-    subtotalResumen.textContent = Number(precio_produc.textContent);
-    totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+    dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
   } else {
-    precio_produc.textContent = Number(precioUnitario.textContent) * Number(cantProductos.value);
-    cantProductosResumen.textContent = Number(cantProductos.value);
-    subtotalResumen.textContent = Number(precio_produc.textContent);
-    totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+    dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
   } 
 });
 
