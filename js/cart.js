@@ -48,10 +48,6 @@ subtract.addEventListener('click', () => {
 
 
 borrar.addEventListener('click', () => {
-  divCadaProducto.remove();
-  // ver para que se cambie lo de resumen
-  // cantProductosResumen.textContent = Number(cantProductos.value);
-  // subtotalResumen.textContent = Number(precio_produc.textContent);
-  // totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
+  divCadaProducto.style.display = "none";
 })
 
