@@ -1,5 +1,6 @@
 import { addCantProducts, subtractCantProducts } from "./add-subtract.js";
 import { dataResumen } from "./cart-resumen.js";
+import { productos } from "./products.js";
 
 const contadorHeader = document.querySelector('#contador-productos');
 const divCadaProducto = document.querySelector('#cart_div_cada_producto');
@@ -20,23 +21,16 @@ window.addEventListener('load', () => {
   dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
 });
 
-
+//Función para que cambien los datos al agregar o restar cantidad de producto
 //Llamada a las funciones del archivo add-subtract.js para agregar o restar cantidad en cada producto
 add.addEventListener('click', () => {
   addCantProducts(cantProductos);
-});
-
-subtract.addEventListener('click', () => {
-  subtractCantProducts(cantProductos);
-})
-
-//Función para que cambien los datos al agregar o restar cantidad de producto
-add.addEventListener('click', () => {
   contadorHeader.textContent = cantProductos.value;
   dataResumen(precio_produc,precioUnitario,cantProductos,cantProductosResumen,subtotalResumen,totalResumen,envio);
 });
 
 subtract.addEventListener('click', () => {
+  subtractCantProducts(cantProductos);
   contadorHeader.textContent = cantProductos.value;
   if (cantProductos.value <= 0){
     cantProductos.value = 0;
@@ -46,12 +40,6 @@ subtract.addEventListener('click', () => {
   } 
 });
 
-
 borrar.addEventListener('click', () => {
-  divCadaProducto.remove();
-  // ver para que se cambie lo de resumen
-  // cantProductosResumen.textContent = Number(cantProductos.value);
-  // subtotalResumen.textContent = Number(precio_produc.textContent);
-  // totalResumen.textContent = Number(precio_produc.textContent) + Number(envio.textContent);
-})
-
+  divCadaProducto.style.display="none";
+});
