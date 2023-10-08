@@ -1,71 +1,102 @@
-
 let mail = document.querySelector("#mail")
-let correcto
+let pass = document.querySelector("#contrasena")
+const form_login = document.querySelector("#main__login__form")
 
-mail.onblur = function validar() {
-    
-    let valor = mail.value
-    let expReg = /[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}/
-    if (expReg.test(valor)) {
-        alert("correo valido")
-        correcto = true
-    }
-    else {
-        alert("correo no valido")
-        correcto = false
-    }
+form_login.addEventListener('submit', e => {
 
-}
+    e.preventDefault();
+
+    mail.onblur = function () {
+        let valor = mail.value
+        let expReg = /[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}/
+        if (valor === null || valor === '') {
+            alert('correo con campo vacio')
+        } else {
+            if (expReg.test(valor)) {
+                alert("correo valido")
+            }
+            else {
+                alert("correo no valido")
+            }
+        }
+    }
+    pass.onblur = function () {
+        let valor = pass.value
+        if (valor === null || valor === '') {
+            alert('pass con campo vacio')
+        }
+    }
+});
+
+
+
+
+
 
 /* expresion regular para validar contraseña 
     ^ (?= (?:.*\\d) {2}) (?=.* [A-Z]) (?=.* [a-z]) (?!. {0,4} (.) (?:.*\\1) {3})\\S {8,15}$
 
 
-*/ 
 
-const form = document.querySelector("#main__register__form")
+
+const form_register = document.querySelector("#main__register__form")
 const nombre = document.querySelector("#nombre")
 const apellido = document.querySelector("#apellido")
-/* const correo = ....  ver esta parte*/
+
 const pass = document.querySelector("#contrasena")
 const pass2 = document.querySelector("#contrasena")
 
-form.addEventListener('submit', e => {
+form_register.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    validarInputs();
+    validarInputsRegister();
 
 });
 
-nombre.onblur = function pruebaNombre() {
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
 
-    const nombreValor = nombre.value.trim();
-      
-    const pass2Valor = pass2.value.trim();
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
 
-    if  (nombreValor === '') {
-        alert("nombre vacio")
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const validarInputsRegister = () => {
+    nombre.onblur = function pruebaNombre() {
+        const nombreValor = nombre.value.trim();
+
+        if (nombreValor === '') {
+            alert("nombre vacio")
+        }
     }
-}
 
-apellido.onblur = function pruebaApellido() {
-    const apellidoValor = apellido.value.trim();
-    if (apellidoValor === '') {
-        alert('apellido vacio')
-     }
+    apellido.onblur = function pruebaApellido() {
+        const apellidoValor = apellido.value.trim();
+        if (apellidoValor === '') {
+            alert('apellido vacio')
+        }
 
 
-}
+    }
 
-pass.onblur = function pruebaPass() {
-    const passValor = pass.value.trim();
-    let expReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
-    
-    if (expReg.test(passValor)){
-        alert('cumple')
-    }else{
-        alert('no cumple')
+    pass.onblur = function pruebaPass() {
+        const passValor = pass.value.trim();
+        let expReg = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+
+        if (expReg.test(passValor)) {
+            alert('cumple')
+        } else {
+            alert('no cumple')
+        }
     }
 }
 /*
