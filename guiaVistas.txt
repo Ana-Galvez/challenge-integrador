@@ -1,11 +1,11 @@
 Project Manager - Ana
 
-tiendaItem - Seba
-adminAdmin - Anto
+tiendaItem - Ana
+adminAdmin - Daniel
 adminRegister - Daniel
 adminEdit - Maca
 tiendaCarrito - Ana
-adminLogin - Edu (subjefe)
+adminLogin - Edu
 tiendaShop - Axel
 adminCreate - Cel
 tiendaHome - Ana
