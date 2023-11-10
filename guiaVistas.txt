@@ -1,12 +1,12 @@
 Project Manager - Ana
 
 tiendaItem - Ana
-adminAdmin - Daniel
-adminRegister - Daniel
+adminAdmin - Edu
+adminRegister - Edu
 adminEdit - Maca
 tiendaCarrito - Ana
 adminLogin - Edu
-tiendaShop - Axel
-adminCreate - Cel
+tiendaShop - Maca
+adminCreate - Maca
 tiendaHome - Ana
 
