@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<!-- <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"> -->
   <link rel="stylesheet" href="/css/index.css">
   <title>Home | Funkoshop</title>
-</head>
-
+</head> -->
+<%- include ("partials/head.ejs") %>
 <body>
 
   <!-- BARRA DE MENÚ -->
@@ -150,8 +148,8 @@
 
   </main>
 
-
-  <footer class="footer">
+  <%- include ("partials/footerShop.ejs") %>
+  <!-- <footer class="footer">
     <nav class="navbar container">
       <ul class="navbar__item">
         <li class="navbar__item"><a class="navbar__link" href="./pages/shop.html">SHOP</a></li>
@@ -163,7 +161,7 @@
       </picture>
     </nav>
     <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  </footer>
+  </footer> -->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="/js/glide.js"></script>
