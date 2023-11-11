@@ -11,7 +11,7 @@ app.use("/", mainRoutes);
 app.use("/auth",authRoutes);
 app.use("/admin",adminRoutes);
 app.use("/shop",shopRoutes);
-
+  
 app.listen(4000, () => {
   console.log("Servidor corriendo en http://localhost:4000");
 });
