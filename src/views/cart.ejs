@@ -10,22 +10,23 @@
   <header>
     <nav class="navbar container">
       <picture class="navbar__logo">
-        <a href="../index.html">
-          <img src="../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop" />
+        <a href="/home">
+          <img src="/img/branding/logo_light_horizontal.svg" alt="Isologotipo de la Marca Funkoshop" />
         </a>
       </picture>
       <ul class="navbar__menu">
-        <li class="navbar__item with-submenu"><a class="navbar__link with-icon" href="shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
+        <li class="navbar__item with-submenu"><a class="navbar__link with-icon" href="/shop">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
           <ul class="submenu">
             <li class="submenu__item"><a href="#" class="submenu__link">Funkos</a></li>
             <li class="submenu__item"><a href="#" class="submenu__link">Remeras</a></li>
             <li class="submenu__item"><a href="#" class="submenu__link">Llaveros</a></li>
           </ul>
         </li>
-        <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="admin/login.html">LOGIN</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="/contact">CONTACTO</a></li>
+        <li class="navbar__item"><a class="navbar__link" href="/auth/login">LOGIN</a></li>
         <div id="carrito_contador">
-          <li class="navbar__item"><a class="navbar__cart" href="cart.html"><img src="../img/icons/cart-icon.svg" alt="icono de carrito"></a></li>
+          <li class="navbar__item"><a class="navbar__cart" href="/shop/cart"><img src="/img/icons/cart-icon.svg" alt="icono de carrito"></a></li>
+          <!-- Contador redondo rojo de productos en el header -->
           <div class="count-products">
             <span id="contador-productos">0</span>
           </div>
@@ -48,7 +49,7 @@
            <section class="cart__table__td-image spacing-36" id="cart_div_cada_producto">
             <div class="cart__table__td-container">
               <picture>
-                <img src="../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+                <img src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
               </picture>
               <div class="cart__table__td-image-description">
                 <p class="cart__table__td-image-description-name">BABY YODA BLUEBALL</p>
@@ -71,7 +72,7 @@
           <section class="cart__table__td-image">
             <div class="cart__table__td-container">
               <picture>
-                <img src="../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
+                <img src="/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
               </picture>
               <div class="cart__table__td-image-description">
                 <p class="cart__table__td-image-description-name">PIDGEOTTO</p>
@@ -117,7 +118,7 @@
         </tbody>
       </table>
       
-      <button class="pagar"><a href="./pagos.html">IR A PAGAR</a></button>
+      <button class="pagar"><a href="">IR A PAGAR</a></button>
     </section>
   </main>
 
@@ -135,6 +136,6 @@
   <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
-  <script src="../js/cart.js" type="module"></script>
+  <script src="/js/cart.js" type="module"></script>
 </body>
 </html>
