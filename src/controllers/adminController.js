@@ -7,4 +7,4 @@ const adminController = {
     editID_delete: (req,res)=>res.send("Ruta para borrar"),
 }
 
-module.exports = adminController
+module.exports = adminController    
