@@ -1,4 +1,4 @@
-const shopController = requiere("../controllers/shopController.js");
+const shopController = require("../controllers/shopController.js");
 const express = require('express');
 const router = express.router();
 
