@@ -1,6 +1,6 @@
 const shopController = require("../controllers/shopController.js");
 const express = require('express');
-const router = express.router();
+const router = express.Router();
 
 router.get("/",shopController.shop_get);
 router.get("/item/:id", shopController.itemId_get);
