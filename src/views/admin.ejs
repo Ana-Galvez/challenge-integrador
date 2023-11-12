@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!--
-<head>
+  <!--<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../css/index.css">
   <title>ADMIN | FUNKOSHOP</title>
 </head> -->
 
-<!-- CERRAR LA COMILLA EN LA RUTA DE PARTIALS -->
-  <%- include ('partials/headerAdmin.ejs) %>
+  <%- include ('partials/head.ejs') %>
   <body>
-    <header>
+    <%- include ('partials/headerAdmin.ejs') %>
+    <!-- <header>
       <nav class="navbar container">
         <picture class="navbar__logo">
           <a href="../../index.html">
@@ -33,7 +32,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
     <main class="container ancho-admin">
       <section class="admin__buscador">
