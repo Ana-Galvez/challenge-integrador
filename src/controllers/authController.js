@@ -1,9 +1,9 @@
 const authController = {
-  login_get : (req,res)=>res.send("Ruta para ver la vista login"),
-  login_post: (req,res)=> res.send("Ruta para hacer el login"),
-  register_get: (req,res)=> res.send("Ruta para la vista registro"),
-  register_post: (req,res)=>res.send("Ruta para hacer el registro"),
-  logout : (req,res)=>res.send("Ruta para sacar el login")
+  login_get : (req,res)=>res.render("login",{title:"LOGIN | FUNKOSHOP"}),
+  login_post: (req,res)=> res.render("login",{title:"LOGIN | FUNKOSHOP"}),
+  register_get: (req,res)=>res.render("registrarse",{title:"REGISTRARSE| FUNKOSHOP"}),
+  register_post: (req,res)=>res.render("registrarse",{title:"REGISTRARSE | FUNKOSHOP"}),
+  logout : (req,res)=>res.render("logout",{title:"CERRARSESION | FUNKOSHOP"}),
 }
 
 module.exports = authController;
