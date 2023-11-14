@@ -70,7 +70,28 @@
             </tr>
           </thead>
           <tbody>
+            <% products.forEach((product)=> { %>
             <tr>
+              <td><%= product.product_id %></td>
+              <td><%= product.product_sku  %></td>
+              <td><%= product.product_name %></td>
+              <td><%= product.licence_name %></td>
+              <td>
+                <a href="/edit"
+                  ><img
+                    class="button__edit"
+                    src="/img/icons/edit_pencil.svg"
+                    alt="Editar"
+                /></a>
+              </td>
+              <td>
+                <a href=""
+                  ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
+                /></a>
+              </td>
+              <% }) %>
+            </tr>
+            <!-- <tr>
               <td>1</td>
               <td>STW001001</td>
               <td>Baby Yoda Blueball</td>
@@ -88,26 +109,7 @@
                   ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
                 /></a>
               </td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>STW001001</td>
-              <td>Baby Yoda Blueball</td>
-              <td>STAR WARS</td>
-              <td>
-                <a href="/edit"
-                  ><img
-                    class="button__edit"
-                    src="/img/icons/edit_pencil.svg"
-                    alt="Editar"
-                /></a>
-              </td>
-              <td>
-                <a href=""
-                  ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
-                /></a>
-              </td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </section>
