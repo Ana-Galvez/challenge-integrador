@@ -78,6 +78,10 @@
         <ul class="slider__items shop__grid">
           <li class="slider__item">
             <article class="card-item">
+
+              <!-- en el href hay que poner la ruta de item, ver en los archivos routes donde aparece item(en este caso shopRoutes.js), 
+                luego ir a app.js para ver si tiene una ruta antes /item/:id  (en este ejemplo app.js shopRoutes tiene primero la ruta /shop)
+              entonces la ruta serìa /shop/item/:id -->
               <a class="card-item__link" href="item.html">
                 <picture  class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
@@ -93,6 +97,9 @@
               </a>
             </article>
           </li>
+
+
+
           <li class="slider__item">
             <article class="card-item">
               <a class="card-item__link" href="item.html">
@@ -246,6 +253,8 @@
     </main>
   </section>
 
+
+  <!-- PONER EL PARTIAL DEL FOOTER SHOP Y BORRAR EL CÒDIGO -->
   <footer class="footer">
     <nav class="navbar container">
       <ul class="navbar__item">

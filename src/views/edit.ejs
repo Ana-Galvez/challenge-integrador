@@ -4,7 +4,9 @@
   <body>
   
     <!-- BARRA DE MENÚ -->
-      <!-- ES headerAdmin  porque edit pertenece a la parte de admin    FIJATE QUE el footer igual es footerAdmin--> 
+      <!-- ES headerAdmin  porque edit pertenece a la parte de admin    FIJATE QUE el footer igual es footerAdmin
+      
+      BORRAR HEAD, HEADER Y FOOTER--> 
     <%- include ('partials/headerShop.ejs') %>
   
     <!-- HERO O BANNER -->
@@ -52,7 +54,6 @@
           </select>
         </section>
         <div class="datos-form">
-          <!-- HAY QUE VER QUE EL INPUT SE AJUSTE AL CONTENIDO -->
           <section class="spacing-36"> 
             <label for="nombre_producto">Nombre del producto: </label>
             <input type="text" name="nombre_producto" id="nombre_producto">
@@ -101,6 +102,7 @@
         </section>
       </form>
     </main>
+    <!-- ES FOOTERADMIN, BORRAR EL CÒDIGO DEL FOOTER -->
     <%- include ("partials/footerShop.ejs") %>
     <footer class="footer">
       <nav class="navbar container">
