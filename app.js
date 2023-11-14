@@ -10,7 +10,6 @@ const app = express();
 app.set("views", path.join(__dirname, "/src/views")); //__dirname marca la ruta hasta donde está el archivo donde se escribe(app.js)
 app.set("view engine", "ejs"); //path.join es para unir en este caso 2 string para que la convierta en una ruta.
 app.use(express.static("public"));
-app.use(express.json());
 
 app.use("/", mainRoutes);
 app.use("/auth",authRoutes);
