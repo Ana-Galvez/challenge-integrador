@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+  <%- include ("partials/head.ejs") %>
+  <body>
+  
+    <!-- BARRA DE MENÚ -->
+    <%- include ('partials/headerShop.ejs') %>
+  
+    <!-- HERO O BANNER -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="/css/index.css">
     <title>EDIT | FUNKOSHOP</title>
   </head>
-  <body>
     <header>
       <nav class="navbar container">
         <picture class="navbar__logo">
-          <a href="../../index.html">
+          <a href="/home">
             <img
-              src="../../img/branding/logo_light_horizontal.svg"
+              src="/img/branding/logo_light_horizontal.svg"
               alt="Isologotipo de la Marca Funkoshop"
             />
           </a>
         </picture>
         <ul class="navbar__menu">
-          <li class="navbar__item"><a class="navbar__link" href="../shop.html">VER TIENDA</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="shop.html">VER TIENDA</a></li>
           <li class="navbar__item"><a class="navbar__link" href="admin.html">ADMIN</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="../shop.html">SALIR</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="shop.html">SALIR</a></li>
         </ul>
       </nav>
     </header>
@@ -80,11 +86,11 @@
         <section class="edit-imagenes">
           <picture class="spacing-36">
             <section>
-              <img class="edit-margen-imagenes" src="../../img/naruto/kakashi-hatake.webp" alt="Kakashi Hatake de la saga Naruto">
+              <img class="edit-margen-imagenes" src="/img/naruto/kakashi-hatake.webp" alt="Kakashi Hatake de la saga Naruto">
               <figcaption>Frente</figcaption>
             </section>
             <section>
-              <img src="../../img/naruto/kakashi hatake-box.webp" alt="Caja de Kakashi Hatake de la saga Naruto">
+              <img src="/img/naruto/kakashi hatake-box.webp" alt="Caja de Kakashi Hatake de la saga Naruto">
               <figcaption>Dorso</figcaption>
             </section>
           </picture>
@@ -94,17 +100,17 @@
         </section>
       </form>
     </main>
-
+    <%- include ("partials/footerShop.ejs") %>
     <footer class="footer">
       <nav class="navbar container">
         <ul class="navbar__item">
-          <li class="navbar__item"><a class="navbar__link" href="../shop.html">SHOP</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="shop.html">SHOP</a></li>
           <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
           <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
-          <li class="navbar__item"><a class="navbar__link" href="../contact.html">CONTACTO</a></li>
+          <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
         </ul>
         <picture>
-          <img src="../../img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
+          <img src="/img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
         </picture>
       </nav>
       <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
