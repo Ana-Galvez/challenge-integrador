@@ -154,17 +154,5 @@
     "product_sku":"HPT001004",
     "img_front":"/img/harry-potter/snape-patronus-1.webp",
     "img_back":"/img/harry-potter/snape-patronus-box.webp"
-  },
-  {
-    "product_id":14,
-    "licence_name":"Naruto Shippuden",
-    "category_name":"Figuras coleccionables",
-    "product_name":"Kakashi Hatake",
-    "product_description":"Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori",
-    "product_price":2000.99,
-    "dues":22,
-    "product_sku":"NAR001001",
-    "img_front":"/img/naruto/kakashi-katake-1.webp",
-    "img_back":"/img/naruto/kakashi-katake-box.webp"
   }
 ]
