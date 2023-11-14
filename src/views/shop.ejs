@@ -76,6 +76,7 @@
     <main class="shop__main">
       <section class="slider">
         <ul class="slider__items shop__grid">
+          <!-- A partir de aca hasta despuès que cierra su </li> hay que hacer el forEach, fijate en admin.ejs o index.ejs -->
           <li class="slider__item">
             <article class="card-item">
 
@@ -89,6 +90,7 @@
                   <img class="card-item__img--back" src="/img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de un Stormtrooper en caja">
                 </picture>
                 <div class="card-item__content">
+                  <!-- Los datos de cada funko lo pasas como objeto, fijate en admin.ejs o index.ejs (YO HICE PRUEBAS EN ESTA PÀGINA Y ANDUVO) -->
                   <p class="card-item__licence">STAR WARS</p>
                   <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
                   <p class="card-item__price">$ 1799,99</p>
@@ -99,7 +101,7 @@
           </li>
 
 
-
+          <!-- CUANDO YA PRUEBES QUE FUNCIONA EL FOREACH TENES QUE BORRAR LOS OTROS LI -->
           <li class="slider__item">
             <article class="card-item">
               <a class="card-item__link" href="item.html">
