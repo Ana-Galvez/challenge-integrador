@@ -74,12 +74,11 @@
             <% products.forEach((product)=> { %>
             <tr>
               <td><%= product.product_id %></td>
-              <td><%= product.product_sku  %></td>
+              <td><%= product.product_sku %></td>
               <td><%= product.product_name %></td>
               <td><%= product.licence_name %></td>
               <td>
-                <!-- MODIFICAR RUTA /admin/edit/:id -->
-                <a href="/admin/edit"
+                <a href="/admin/edit/<%= product.product_id %>"
                   ><img
                     class="button__edit"
                     src="/img/icons/edit_pencil.svg"
@@ -87,7 +86,7 @@
                 /></a>
               </td>
               <td>
-                <a href="/admin/delete"
+                <a href="/admin/delete//<%= product.product_id %>"
                   ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
                 /></a>
               </td>
