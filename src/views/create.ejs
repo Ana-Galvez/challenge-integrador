@@ -1,30 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include ("partials/head.ejs") %>
-  <body>
-  
-    <!-- BARRA DE MENÚ -->
-    <!-- ES headerAdmin  porque create pertenece a la parte de admin  FIJATE QUE el footer igual es footerAdmin-->
-    <!-- BORRAR LOS CÒDIGOG DEL HEAD, HEADER Y FOOTER Y PONER FOOTERADMIN -->
-    <%- include ('partials/headerShop.ejs') %>
-  
-    <!-- HERO O BANNER -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/index.css">
-  <title>CREATE | FUNKOSHOP</title>
-</head>
+  <%- include ('partials/head.ejs') %>
 
-  <header>
-    <nav class="navbar container">
-      <picture class="navbar__logo">
-        <a href="/home">
-          <img
-            src="/img/branding/logo_light_horizontal.svg"
-            alt="Isologotipo de la Marca Funkoshop"
-          />
-        </a>
+  <body>
+    <%- include ('partials/headerAdmin.ejs') %>
+  
       </picture>
       <ul class="navbar__menu">
         <li class="navbar__item"><a class="navbar__link" href="shop.html">VER TIENDA</a></li>
@@ -96,21 +76,7 @@
     </form>
   </main>
 
-  <!-- VA FOOTERADMIN -->
-  <%- include ("partials/footerShop.ejs") %>
-  <footer class="footer">
-    <nav class="navbar container">
-      <ul class="navbar__item">
-        <li class="navbar__item"><a class="navbar__link" href="shop.html">SHOP</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="register.html">REGISTRARSE</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="login.html">INGRESAR</a></li>
-        <li class="navbar__item"><a class="navbar__link" href="contact.html">CONTACTO</a></li>
-      </ul>
-      <picture>
-        <img src="img/branding/isotype.svg" alt="Isotipo de la Marca Funkoshop">
-      </picture>
-    </nav>
-    <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
-  </footer>
+  <%- include ('partials/footerAdmin.ejs') %>
+  
 </body>
 </html>

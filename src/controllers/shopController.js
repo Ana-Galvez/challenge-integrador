@@ -1,10 +1,7 @@
-//importar fs path
-
-
+const fs = require("fs");
+const path = require("path");
 
 const shopController = {
-   // FIJATE COMO PONER PARA QUE LEA EL JSON, EN MAINCONTROLLER O ADMINCONTROLLER
-   //
    shop_get: (req,res)=>{
       const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
       const product = JSON.parse(fileJson);
