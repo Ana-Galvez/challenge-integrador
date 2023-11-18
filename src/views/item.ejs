@@ -5,16 +5,20 @@
   <%- include ('partials/headerShop.ejs') %>
 
   <main class="item__main">
+
+      
     <section class="item__main__producto container">
+      <% products.forEach((product)=>{%>
+        <% if(product.product_id == id){%>
       <picture class="card-item__cover">
-        <img class="card-item__img--front" src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
-        <img class="card-item__img--back" src="/img/star-wars/baby-yoda-box.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian en caja">
+        <img class="card-item__img--front" src="<%= product.img_front %>" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+        <img class="card-item__img--back" src="<%= product.img_back %>" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian en caja">
       </picture>
       <article class="item__main__producto__item">
-        <p class="item__main__producto__item--licence">STAR WARS</p>
-        <h3 class="item__main__producto__item--name">BABY YODA BLUEBALL</h3>
-        <p class="item__main__producto__item--description">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
-        <p class="item__main__producto__item--price">$ 1799,99</p>
+        <p class="item__main__producto__item--licence"><%= product.licence_name %></p>
+        <h3 class="item__main__producto__item--name"><%= product.product_name %></h3>
+        <p class="item__main__producto__item--description"><%= product.product_description %></p>
+        <p class="item__main__producto__item--price">$ <%= product.product_price %></p>
         <div class="item__main__producto__item--div">
           <input class="item__main__producto__item--input" type="text" name="cantidad" id="cantidad" placeholder="0" disabled>
           <div class="icons">
@@ -25,7 +29,11 @@
         </div>
         <p class="item__main__producto__item--promo"><a class="item__main__producto__item--promo-link" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
       </article>
+      <% } %>
+      <% }) %>
     </section>
+
+
 
     <section class="slider container glide">
       <!-- Carrousel -->
@@ -34,6 +42,7 @@
         <ul class="slider__items glide__slides">
 
           <% products.forEach((product)=>{ %>
+
           <li class="slider__item glide__slide">
             <article class="card-item">
               <a class="card-item__link" href="/shop">
@@ -45,12 +54,13 @@
                 <div class="card-item__content">
                   <p class="card-item__licence"><%= product.licence_name %></p>
                   <h4 class="card-item__name"><%= product.product_name %></h4>
-                  <p class="card-item__price"><%= product.product_price %></p>
+                  <p class="card-item__price">$ <%= product.product_price %></p>
                   <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                 </div>
               </a>
             </article>
           </li>
+
           <% }) %>
         </ul>
       </div>
