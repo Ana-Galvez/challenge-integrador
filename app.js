@@ -18,6 +18,8 @@ app.use("/shop",shopRoutes);
 
 app.use(errorController.error404);
 app.use(errorController.error500);
+app.use(errorController.error400);
+app.use(errorController.error403);
 
 app.listen(4000, () => {
   console.log("Servidor corriendo en http://localhost:4000");
