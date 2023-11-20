@@ -25,7 +25,7 @@
             <button id="add" class="item__quantity" type="button">+</button>
             <button id="subtract" class="item__quantity" type="button">-</button>
           </div>
-          <button class="item__button" type="submit"><a href="/shop/cart">Agregar al Carrito</a></button>
+          <button class="item__button" type="submit"><a href="/shop/item/<%= product.product_id %>/add">Agregar al Carrito</a></button>
         </div>
         <p class="item__main__producto__item--promo"><a class="item__main__producto__item--promo-link" href="#">Ver métodos de pago</a> - 3 CUOTAS SIN INTERÉS</p>
       </article>
@@ -44,7 +44,7 @@
           <% products.forEach((product)=>{ %>
           <li class="slider__item glide__slide">
             <article class="card-item">
-              <a class="card-item__link" href="/shop">
+              <a class="card-item__link" href="/shop/item/<%= product.product_id %>">
                 <picture class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
                   <img class="card-item__img--front" src="<%= product.img_front %>" alt="<%= product.product_description %>">
@@ -75,5 +75,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script src="/js/glide.js"></script>
   <script src="/js/item.js" type="module"></script>
+  <script src="/js/addToCart.js" defer></script>
 </body>
 </html>

@@ -42,6 +42,7 @@
       <section class="cart__table__body">
         
            <section class="cart__table__td-image spacing-36" id="cart_div_cada_producto">
+            
             <div class="cart__table__td-container">
               <picture>
                 <img src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
@@ -63,30 +64,6 @@
             <div class="cart__table__td-totalprice">$ <span id="cart_precio_total_producto">3599.98</span></div>
             <div class="cart__table__td-delete"><iconify-icon id="cart_eliminar" icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
           </section>
-        
-          <section class="cart__table__td-image">
-            <div class="cart__table__td-container">
-              <picture>
-                <img src="/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
-              </picture>
-              <div class="cart__table__td-image-description">
-                <p class="cart__table__td-image-description-name">PIDGEOTTO</p>
-                <p class="cart__table__td-image-description-licence">POKEMON</p>
-                <p class="cart__table__td-image-description-price">precio unitario: $ 1799,99</p>
-              </div>
-          </div>
-
-          <div class="cart__table__td-number">
-            <input type="text" name="cantidad" id="cart__cantidad1" placeholder="0">
-            <div class="btn-cant">
-              <button class="cart__quantity" type="button">+</button>
-              <button class="cart__quantity" type="button">-</button>
-            </div>
-          </div>
-          
-          <div class="cart__table__td-totalprice">$ 1799,99</div>
-          <div class="cart__table__td-delete"><iconify-icon icon="typcn:delete-outline" style="color: #f24e1e;" width="26" height="26"></iconify-icon></div>
-        </section>
       </section>
     </section>
 
@@ -119,5 +96,6 @@
   <%- include ("partials/footerShop.ejs") %>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="/js/cart.js" type="module"></script>
+  <script src="/js/addToCart.js" type="module"></script>
 </body>
 </html>

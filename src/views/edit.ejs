@@ -7,41 +7,38 @@
     <main class="container margenes-arriba-abajo36 ancho">
       <h1 class="admin-title">EDITAR ITEM</h1>
       <form action="">
+        <% products.forEach((product)=>{ %>
+          <% if (product.product_id == id) { %>
         <section class="categoria-licencia spacing-36">
           <label for="categoria">Categoría: </label>
           <select name="categoria" id="categoria">
-            <option>Figuras</option>
-            <option>Figuras</option>
-            <option>Figuras</option>
-            <option>Figuras</option>
+            <option><%= product.category_name %></option>
           </select>
           <label for="licencia">Licencia: </label>
           <select name="licencia" id="licencia">
-            <option>Naruto Shippuden</option>
-            <option>Naruto Shippuden</option>
-            <option>Naruto Shippuden</option>
-            <option>Naruto Shippuden</option>
+            <option><%= product.licence_name %></option>
           </select>
         </section>
         <div class="datos-form">
           <section class="spacing-36"> 
             <label for="nombre_producto">Nombre del producto: </label>
-            <input type="text" name="nombre_producto" id="nombre_producto">
+            <!-- agregar en el input  size="50" así entra todo el nombre -->
+            <input type="text" name="nombre_producto" id="nombre_producto" value="<%= product.product_name %>">
           </section>
           <section class="spacing-36">
-            <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"></textarea>
+            <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"><%= product.product_description %></textarea>
           </section>
           <section class="sector-sku-descuento margin-sku">
             <label for="sku">SKU: </label>
-            <input type="text" name="sku" id="sku" size="12">
+            <input type="text" name="sku" id="sku" size="12" value="<%= product.product_sku %>">
             <label for="precio">Precio: </label>
-            <input type="text" name="precio" id="precio" size="12">
+            <input type="text" name="precio" id="precio" size="12" value="$ <%= product.product_price %>">
             <label for="stock">Stock: </label>
             <input class="center" type="text" name="stock" id="stock" size="5">
           </section>
           <section class="sector-sku-descuento margin-descuento">
             <label for="descuento">Descuento: </label>
-            <input class="center" type="text" name="descuento" id="descuento" size="5">
+            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.dues %>%">
             <label for="cuotas">Cuotas: </label>
             <select name="cuotas" id="cuotas">
               <option>Sin cuotas</option>
@@ -61,11 +58,11 @@
         <section class="edit-imagenes">
           <picture class="spacing-36">
             <section>
-              <img class="edit-margen-imagenes" src="/img/naruto/kakashi-hatake.webp" alt="Kakashi Hatake de la saga Naruto">
+              <img class="edit-margen-imagenes" src="<%= product.img_front %>" alt="<%= product.product_description %>">
               <figcaption>Frente</figcaption>
             </section>
             <section>
-              <img src="/img/naruto/kakashi hatake-box.webp" alt="Caja de Kakashi Hatake de la saga Naruto">
+              <img src="<%= product.img_back %>" alt="<%= product.product_description %>">
               <figcaption>Dorso</figcaption>
             </section>
           </picture>
@@ -73,6 +70,8 @@
         <section class="button-create-edit">
           <button type="submit">Modificar Producto</button>
         </section>
+          <% } %>
+        <% }) %>
       </form>
     </main>
     <%- include ('partials/footerAdmin.ejs') %>

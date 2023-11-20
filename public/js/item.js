@@ -4,11 +4,20 @@ const cantidad =document.querySelector('#cantidad');
 const add = document.querySelector('#add');
 const subtract = document.querySelector('#subtract');
 
+const containerProduct = document.querySelector('.item__main__producto')
+
 //Llamada a las funciones del archivo add-subtract.js para agregar o restar cantidad en cada producto
 add.addEventListener('click', () => {
     addCantProducts(cantidad);
   });
   
-  subtract.addEventListener('click', () => {
-    subtractCantProducts(cantidad);
-  })
+subtract.addEventListener('click', () => {
+  subtractCantProducts(cantidad);
+});
+
+//Agregar producto al carrito
+// product.forEach(prod => {
+//   if(prod == product.product_id){
+//     containerProduct.getElementsByClassName('item__button')[0].addEventListener('click', () => addToCart(prod))
+//   }  
+// })
