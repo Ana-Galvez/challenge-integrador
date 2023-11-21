@@ -11,3 +11,9 @@ adminCreate - Maca
 tiendaHome - Ana
 
 Hoolalsaas
+
+BD de funkos
+HOST=sql10.freesqldatabase.com
+USER=sql10627826
+PASS=YH6I5nV7ny
+DB=sql10627826
