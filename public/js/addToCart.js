@@ -1,15 +1,20 @@
-function addToCart(producto) {
-  const addQuantity = document.querySelector('#add')
-  const subtractQuantity = document.querySelector('#subtract')
-  const quantityProduct = document.querySelector('#cantidad')
+// const contenedorGrande = document.querySelector("#contenedor-grande");
 
+// let carrito = [];
 
-  const savedProduct = localStorage.getItem('funko')
-  console.log(savedProduct);
+// products.forEach((product) => {
+//   let contenedorChiquito = document.createElement("div");
+//   contenedorChiquito.className = "contenedor-chiquito";
+//   contenedorChiquito.innerHTML = `
+//     <p id="nombre-producto">${product.product_name}</p>
+//     <p>${product.licence_name}</p>
+//     <p>$ ${product.product_price}</p>
+//     <p id="descuento-producto">${product.dues} cuotas sin interés</p>
+//   `;
 
-  if (!savedProduct) {
-    const newProduct = producto
-    newProduct.quantity = Number(quantityProduct.value)
-    localStorage.setItem('funko',JSON.stringify([newProduct]))
-  }
-}
+//   let comprar = document.createElement("button");
+//   comprar.innerText = "Comprar";
+
+//   contenedorGrande.append(contenedorChiquito);
+//   contenedorChiquito.append(comprar);
+// });
