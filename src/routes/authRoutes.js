@@ -1,7 +1,8 @@
 const authController = require("../controllers/authController.js");
 const express = require("express");
-const { body } = require('express-validator')
 const validateInput = require('../middlewares/validador.js')
+const { body } = require('express-validator')
+
 const router = express.Router();
 
 const loginValidation = [
@@ -10,6 +11,7 @@ const loginValidation = [
     .withMessage('Correo no válido, verifique'),
   body('contrasena')
     .isLength({ min: 8 })
+    .isAlphanumeric()
     .withMessage('Contraseña mínima 8 caracteres con letras y números')
 ]
 

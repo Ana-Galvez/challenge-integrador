@@ -13,6 +13,6 @@ router.get("/edit/:id", adminController.editID_get); // viste editar
 router.put("/edit/:id", adminController.editID_put); // vista editado
 router.delete("/delete/:id", adminController.editID_delete);
 
-router.get("/login")
+
 
 module.exports = router;
