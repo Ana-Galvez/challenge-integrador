@@ -1,4 +1,5 @@
 const express = require("express");
+const methodOverride = require('method-override')
 const path = require("path");
 const mainRoutes = require('./src/routes/mainRoutes.js');
 const authRoutes = require('./src/routes/authRoutes.js');
@@ -12,6 +13,7 @@ app.set("view engine", "ejs"); //path.join es para unir en este caso 2 string pa
 app.use(express.static("public"));
 app.use(express.urlencoded());
 app.use(express.json());
+app.use(methodOverride('_method'))
 
 app.use("/", mainRoutes);
 app.use("/auth",authRoutes);
