@@ -5,7 +5,7 @@ const validateInput = (req, res, next) => {
 
   if (!errors.isEmpty()) {
    return res.status(400).json({ errors: errors.array() });
-    // return res.status(400).render("error400",{title:"Recurso no encontrado"});
+    // return res.status(400).render("error400",{title:"Verifique los datos"});
   }
   next();
 };
