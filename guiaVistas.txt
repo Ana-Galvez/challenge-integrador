@@ -17,3 +17,6 @@ HOST=sql10.freesqldatabase.com
 USER=sql10627826
 PASS=YH6I5nV7ny
 DB=sql10627826
+
+
+DEBEN CREAR A LA MISMA ALTURA QUE .gitignore  el archivo .env
