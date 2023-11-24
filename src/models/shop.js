@@ -1,9 +1,8 @@
 const connection = require('../config/conn.js')
-
+let rows
 const getProducts = () => {
   try {
-    const {rows} = connection.query('SELECT * FROM product;')
-    console.log(rows);
+    rows = connection.query('SELECT * FROM product;')
   } catch (error) {
     throw error
   }finally{
@@ -12,6 +11,7 @@ const getProducts = () => {
 }
 
 getProducts()
+console.log(rows);
 module.exports= {
   getProducts,
 }

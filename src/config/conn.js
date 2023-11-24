@@ -14,7 +14,25 @@ connection.connect((error)=>{
     throw error
   }else{
     console.log("Conexión a la base de datos exitosa");
+    getProducts(function(result){
+      return result
+    })
   }
+  connection.end()
 });
-connection.end()
+
+
+function getProducts (cb) {
+  connection.query("SELECT * FROM product;",function(error,result){
+    if (error){ 
+      throw error
+    }else{
+      cb((result.length>0)?result[result.forEach(res => {
+         console.log(res.price, res.product_name)
+
+      })]:"")
+    }
+  }
+)
+}
 module.exports= connection
