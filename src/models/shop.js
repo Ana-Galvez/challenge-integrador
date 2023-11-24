@@ -1,17 +1,16 @@
-const connection = require('../config/conn.js')
-let rows
-const getProducts = () => {
+const {connection} = require('../config/conn.js')
+
+const getProducts = async () => {
   try {
-    rows = connection.query('SELECT * FROM product;')
+    const [rows] = await connection.query('SELECT * FROM product;')
+    return rows
   } catch (error) {
     throw error
   }finally{
-    connection.end()
+    connection.releaseConnection()
   }
 }
 
-getProducts()
-console.log(rows);
 module.exports= {
   getProducts,
 }
