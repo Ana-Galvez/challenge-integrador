@@ -11,6 +11,18 @@ const getProducts = async () => {
   }
 }
 
+const getLicences = async ()=>{
+  try{
+    const[rows] = await connection.query('SELECT * FROM licence;')
+    return rows
+  }catch(error){
+    throw error
+  }finally{
+    connection.releaseConnection()
+  }
+}
+
 module.exports= {
   getProducts,
+  getLicences,
 }
