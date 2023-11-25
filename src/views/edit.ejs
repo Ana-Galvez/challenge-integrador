@@ -6,10 +6,9 @@
 
     <main class="container margenes-arriba-abajo36 ancho">
       <h1 class="admin-title">EDITAR ITEM</h1>
-      <!-- <form action="/admin/edit/<%= product.product_id %>?_method=PUT" method="post" enctype="multipart/form-data"></form> -->
-      <form action="">
-        <% products.forEach ((product)=>{ % >
-          <% if  (product.product_id==id) { % >
+      <form action="/admin/edit/<%= products.product_id %>?_method=PUT" method="post" enctype="multipart/form-data">
+        <% products.forEach ((product)=>{ %>
+          <% if  (product.product_id==id) { %>
         <section class="categoria-licencia spacing-36">
           <label for="categoria">Categoría: </label>
           <select name="categoria" id="categoria">
@@ -70,8 +69,8 @@
         <section class="button-create-edit">
           <button type="submit">Modificar Producto</button>
         </section>
-        < % } %>
-        < % }) %>
+        <% } %>
+        <% }) %>
       </form>
     </main>
     <%- include ('partials/footerAdmin.ejs') %>
