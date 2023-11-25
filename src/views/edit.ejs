@@ -32,13 +32,13 @@
             <label for="sku">SKU: </label>
             <input type="text" name="sku" id="sku" size="12" value="<%= product.product_sku %>">
             <label for="precio">Precio: </label>
-            <input type="text" name="precio" id="precio" size="12" value="<%= product.product_price %>">
+            <input type="text" name="precio" id="precio" size="12" value="$<%= product.product_price %>">
             <label for="stock">Stock: </label>
             <input class="center" type="text" name="stock" id="stock" size="5">
           </section>
           <section class="sector-sku-descuento margin-descuento">
             <label for="descuento">Descuento: </label>
-            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.dues %>">
+            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.dues %>%">
             <label for="cuotas">Cuotas: </label>
             <select name="cuotas" id="cuotas">
               <option>Sin cuotas</option>
