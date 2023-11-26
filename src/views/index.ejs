@@ -19,41 +19,54 @@
   <main class="main-container">
 
     <!-- SECCIÓN DE COLECCIONES -->
+    
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
+        <% if(licence.licence_id === 2) { %>
       <!-- primera imágen baby-yoda -->
       <article class="collection__content">
         <h2 class="collection__title">Star Wars & The Mandalorian</h2>
-        <p class="collection__text">Disfruta de una saga que sigue agregando personajes a su colección.</p>
+        <p class="collection__text"><%= licence.licence_description %></p>
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
         <img src="/img/star-wars/baby-yoda-1.webp"
-          alt="Figura coleccionable Funko de Grogu de la serie The Mandalorian">
+          alt="<%= licence.licence_description %>">
       </picture>
+      <% } %>
+      <% }) %>
     </section>
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
+        <% if(licence.licence_id === 2) { %>
       <!-- segunda imágen vulpix -->
       <article class="collection__content">
         <h2 class="collection__title">POKEMON INDIGO</h2>
-        <p class="collection__text">Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
+        <p class="collection__text"><%= licence.licence_description %></p>
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
-        <img src="/img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon">
+        <img src="/img/pokemon/vulpix-1.webp" alt="<%= licence.licence_description %>">
       </picture>
+      <% } %>
+      <% }) %>
     </section>
 
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
+        <% if(licence.licence_id === 2) { %>
       <!-- tercera imágen snape-patronus -->
       <article class="collection__content">
         <h2 class="collection__title">HARRY POTTER</h2>
-        <p class="collection__text">Revive los recuerdos de una saga llena de magia y encanto.</p>
+        <p class="collection__text"><%= licence.licence_description %></p>
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
         <img src="/img/harry-potter/snape-patronus-1.webp"
-          alt="Figura coleccionable Funko del Patronus de Snape en la película de Harry Potter">
+          alt="<%= licence.licence_description %>">
       </picture>
+      <% } %>
+      <% }) %>
     </section>
 
     <!-- Carrousel -->

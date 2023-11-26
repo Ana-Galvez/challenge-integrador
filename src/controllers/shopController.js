@@ -5,7 +5,6 @@ const path = require("path");
 const shopController = {
    shop_get: async (req,res)=>{
       const allProducts = await modelos.getProducts()
-      console.log(allProducts);
       // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
       // const product = JSON.parse(fileJson);
       res.render("shop",{title:"SHOP | FUNKOSHOP",products: allProducts})},
