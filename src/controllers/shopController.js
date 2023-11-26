@@ -9,11 +9,12 @@ const shopController = {
       // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
       // const product = JSON.parse(fileJson);
       res.render("shop",{title:"SHOP | FUNKOSHOP",products: allProducts})},
-   itemId_get: (req, res) => {
+   itemId_get: async (req, res) => {
       const id = req.params.id;
-      const fileJson = fs.readFileSync(path.join(__dirname, "../../products.json"));
-      const product = JSON.parse(fileJson);
-      res.render("item", { title: "ITEM | FUNKOSHOP",products:product,id})},
+      const allProducts = await modelos.getProducts()
+      // const fileJson = fs.readFileSync(path.join(__dirname, "../../products.json"));
+      // const product = JSON.parse(fileJson);
+      res.render("item", { title: "ITEM | FUNKOSHOP",products:allProducts,id})},
    itemIdAdd_post: (req, res) => {
       const id = req.params.id
       const fileJson = fs.readFileSync(path.join(__dirname, "../../products.json"));
