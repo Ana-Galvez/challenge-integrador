@@ -5,10 +5,10 @@ const path = require("path");
 const shopController = {
    shop_get: async (req,res)=>{
       const allProducts = await modelos.getProducts()
-      const allLicences = await modelos.getLicences()
+      // const allLicences = await modelos.getLicences()
       // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
       // const product = JSON.parse(fileJson);
-      res.render("shop",{title:"SHOP | FUNKOSHOP",products: allProducts,licences:allLicences})},
+      res.render("shop",{title:"SHOP | FUNKOSHOP",products: allProducts})},
    itemId_get: (req, res) => {
       const id = req.params.id;
       const fileJson = fs.readFileSync(path.join(__dirname, "../../products.json"));
