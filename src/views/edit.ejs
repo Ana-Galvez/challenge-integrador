@@ -30,11 +30,11 @@
           </section>
           <section class="sector-sku-descuento margin-sku">
             <label for="sku">SKU: </label>
-            <input type="text" name="sku" id="sku" size="12" value="<%= product.product_sku %>">
+            <input type="text" name="sku" id="sku" size="12" value="<%= product.sku %>">
             <label for="precio">Precio: </label>
-            <input type="text" name="precio" id="precio" size="12" value="$ <%= product.product_price %>">
+            <input type="text" name="precio" id="precio" size="12" value="$ <%= product.price %>">
             <label for="stock">Stock: </label>
-            <input class="center" type="text" name="stock" id="stock" size="5">
+            <input class="center" type="text" name="stock" id="stock" size="5" value="<%= product.stock %>">
           </section>
           <section class="sector-sku-descuento margin-descuento">
             <label for="descuento">Descuento: </label>
@@ -58,11 +58,11 @@
         <section class="edit-imagenes">
           <picture class="spacing-36">
             <section>
-              <img class="edit-margen-imagenes" src="<%= product.img_front %>" alt="<%= product.product_description %>">
+              <img class="edit-margen-imagenes" src="<%= product.image_front %>" alt="<%= product.product_description %>">
               <figcaption>Frente</figcaption>
             </section>
             <section>
-              <img src="<%= product.img_back %>" alt="<%= product.product_description %>">
+              <img src="<%= product.image_back %>" alt="<%= product.product_description %>">
               <figcaption>Dorso</figcaption>
             </section>
           </picture>

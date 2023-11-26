@@ -19,8 +19,8 @@
   <main class="main-container">
 
     <!-- SECCIÓN DE COLECCIONES -->
-    <% licences.forEach((licence)=>{ %>
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
       <% if(licence.licence_id === 2) { %>
       <!-- primera imágen baby-yoda -->
       <article class="collection__content">
@@ -37,8 +37,10 @@
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
+      <% }) %>
     </section>
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
       <% if(licence.licence_id === 1) { %>
       <!-- segunda imágen vulpix -->
       <article class="collection__content">
@@ -51,9 +53,11 @@
         <img src="/img/pokemon/vulpix-1.webp" alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
+      <% }) %>
     </section>
 
     <section class="collection container">
+      <% licences.forEach((licence)=>{ %>
       <% if(licence.licence_id === 3) { %>
       <!-- tercera imágen snape-patronus -->
       <article class="collection__content">
@@ -67,8 +71,8 @@
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
+      <% }) %>
     </section>
-    <% }) %>
     
     <!-- Carrousel -->
     <section class="slider container glide">
