@@ -30,7 +30,7 @@
   <main id="main-register">
     <h1 class="admin-title">CREA TU CUENTA</h1>
     <p id="main__register__subtitle">Completa el formulario para ser parte del mundo de los Funkos</p>
-    <form action="" id="main__register__form">
+    <form action="/auth/register" method="post" enctype="application/x-www-form-urlencoded" id="main__register__form">
       <div class="main__datos-form">
         <section class="spacing-form">
           <label for="nombre">Nombre: </label><input type="text" name="nombre" id="nombre" placeholder="John" size="40">
@@ -54,7 +54,7 @@
           <input type="checkbox" name="condiciones" id="condiciones"><label for="condiciones">Acepto <a id="condiciones" href="#">Términos y condiciones</a></label>
         </section>
       </div>
-    </form>
+    </>
   </main>
   <%- include ('partials/footerAdmin.ejs') %>
   <!-- <footer class="footer">
