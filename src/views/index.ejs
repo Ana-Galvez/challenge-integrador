@@ -33,7 +33,7 @@
       </article>
       <picture class="collection__cover">
         <!-- VER IMAGEN -->
-        <img src="/img/star-wars/baby-yoda-1.webp"
+        <img src="<%= licence.licence_image %>"
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
@@ -50,7 +50,7 @@
       </article>
       <picture class="collection__cover">
         <!-- VER IMAGEN -->
-        <img src="/img/pokemon/vulpix-1.webp" alt="<%= licence.licence_description %>">
+        <img src="<%= licence.licence_image %>" alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
       <% }) %>
@@ -67,7 +67,7 @@
       </article>
       <picture class="collection__cover">
         <!-- VER IMAGEN -->
-        <img src="/img/harry-potter/snape-patronus-1.webp"
+        <img src="<%= licence.licence_image %>"
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
@@ -85,8 +85,8 @@
               <a class="card-item__link" href="/shop/item/<%= product.product_id %>">
                 <picture class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
-                  <img class="card-item__img--front" src="../../public/img <%= product.image_front %>" alt="<%= product.product_description %>">
-                  <img class="card-item__img--back" src="../../public/img <%= product.image_back %>" alt="<%= product.product_description %>">
+                  <img class="card-item__img--front" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
+                  <img class="card-item__img--back" src="/img<%= product.image_back %>" alt="<%= product.product_description %>">
                 </picture>
                 <div class="card-item__content">
                   <p class="card-item__licence"><%= product.licence_name %></p>
