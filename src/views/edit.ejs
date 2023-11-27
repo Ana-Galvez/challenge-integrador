@@ -52,17 +52,17 @@
           </section>
           <section class="spacing-36">
             <label for="imagenes">Imágenes: </label>
-            <input type="file" name="imagenes" id="imagenes">
+            <input type="file" name="imagenes" id="imagenes" multiple>
           </section>
         </div>
         <section class="edit-imagenes">
           <picture class="spacing-36">
             <section>
-              <img class="edit-margen-imagenes" src="<%= product.image_front %>" alt="<%= product.product_description %>">
+              <img class="edit-margen-imagenes" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
               <figcaption>Frente</figcaption>
             </section>
             <section>
-              <img src="<%= product.image_back %>" alt="<%= product.product_description %>">
+              <img src="/img<%= product.image_back %>" alt="<%= product.product_description %>">
               <figcaption>Dorso</figcaption>
             </section>
           </picture>

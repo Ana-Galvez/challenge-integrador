@@ -30,7 +30,7 @@
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
-        <img src="/img/star-wars/baby-yoda-1.webp"
+        <img src="<%=licence.licence_image %>"
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
@@ -38,7 +38,7 @@
     </section>
     <section class="collection container">
       <% licences.forEach((licence)=>{ %>
-        <% if(licence.licence_id === 2) { %>
+        <% if(licence.licence_id === 1) { %>
       <!-- segunda imágen vulpix -->
       <article class="collection__content">
         <h2 class="collection__title">POKEMON INDIGO</h2>
@@ -46,7 +46,7 @@
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
-        <img src="/img/pokemon/vulpix-1.webp" alt="<%= licence.licence_description %>">
+        <img src="<%=licence.licence_image %>" alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
       <% }) %>
@@ -54,7 +54,7 @@
 
     <section class="collection container">
       <% licences.forEach((licence)=>{ %>
-        <% if(licence.licence_id === 2) { %>
+        <% if(licence.licence_id === 3) { %>
       <!-- tercera imágen snape-patronus -->
       <article class="collection__content">
         <h2 class="collection__title">HARRY POTTER</h2>
@@ -62,7 +62,7 @@
         <a class="collection__link" href="/shop">VER COLECCIÓN</a>
       </article>
       <picture class="collection__cover">
-        <img src="/img/harry-potter/snape-patronus-1.webp"
+        <img src="<%=licence.licence_image %>"
           alt="<%= licence.licence_description %>">
       </picture>
       <% } %>
@@ -80,13 +80,13 @@
               <a class="card-item__link" href="/shop">
                 <picture class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
-                  <img class="card-item__img--front" src="<%= product.img_front %>" alt="<%= product.product_description %>">
-                  <img class="card-item__img--back" src="<%= product.img_back %>" alt="<%= product.product_description %>">
+                  <img class="card-item__img--front" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
+                  <img class="card-item__img--back" src="/img<%= product.image_back %>" alt="<%= product.product_description %>">
                 </picture>
                 <div class="card-item__content">
                   <p class="card-item__licence"><%= product.licence_name %></p>
                   <h4 class="card-item__name"><%= product.product_name %></h4>
-                  <p class="card-item__price"><%= product.product_price %></p>
+                  <p class="card-item__price"><%= product.price %></p>
                   <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                 </div>
               </a>
