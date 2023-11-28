@@ -20,14 +20,11 @@ const authController = {
     res.render("register", { title: "REGISTRARSE| FUNKOSHOP" }),
 
   register_post: async (req, res) => {
-    const usuarioNuevo = {
-      nombre: req.body.nombre,
-      apellido: req.body.apellido,
-      mail: req.body.mail,
-      contrasena: req.body.contrasena      
-    } 
-    const [creado] = await user.crearUser(usuarioNuevo );
+    const { nombre, apellido, mail, contrasena } = req.body;
+    console.log(`hola ${nombre}`);
 
+    const [creado] = await user.crearUser(`'${nombre}', '${apellido}', '${mail}', '${contrasena}'`);
+    console.log(nombre);
     if (creado !== undefined) {
       console.log("paso la query");
     }
