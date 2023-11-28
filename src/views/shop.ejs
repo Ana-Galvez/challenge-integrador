@@ -44,11 +44,11 @@
 
     <main class="shop__main">
       <section class="slider">
-        <ul class="slider__items shop__grid">
+        <ul class="slider__items shop__grid" id="resultsProducts">
           <% products.forEach((product)=> { %>
           <li class="slider__item">
             <article class="card-item">
-              <a class="card-item__link" href="/shop/item/<%= product.product_id%> ">
+              <a class="card-item__link" href="/shop/item/<%= product.product_id%>">
                 <picture  class="card-item__cover">
                   <span class="card-item__tag">Nuevo</span>
                   <img class="card-item__img--front" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
@@ -82,6 +82,7 @@
   </section>
   <%- include ("partials/footerShop.ejs") %>
 
+  <script src="/public/js/shop_filtros.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>

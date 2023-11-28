@@ -9,6 +9,11 @@ const shopController = {
       // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
       // const product = JSON.parse(fileJson);
       res.render("shop",{title:"SHOP | FUNKOSHOP",products: allProducts})},
+   shop_post: async (req,res)=>{
+      const { searchTerm } = req.body;
+      const allProducts = await modelos.getProducts()
+      const filters = await modelos.filters()
+      res.render("shop",{title: "SHOP | FUNKOSHOP",filters,products:allProducts})},
    itemId_get: async (req, res) => {
       const id = req.params.id;
       const allProducts = await modelos.getProducts()
