@@ -15,17 +15,22 @@ const loginValidation = [
 
 const registerValidation = [
   body("nombre")
+  .notEmpty()
     .isString()
     .isLength({ min: 3, max: 20 })
     .withMessage("Minimo 3 caracteres"),
   ,
   body("apellido")
+  .notEmpty()
     .isString()
     .isLength({ min: 2, max: 20 })
     .withMessage("Minimo 3 caracteres"),
   ,
-  body("mail").isEmail().withMessage("Correo no válido, verifique"),
-  body("contrasena").isLength({ min: 6 }).isAlphanumeric(),
+  body("mail")
+  .notEmpty()
+  .isEmail()
+  .withMessage("Correo no válido, verifique"),
+  body("contrasena").isLength({ min: 6 }).isAlphanumeric()
 ];
 
 router.get("/login", authController.login_get);
