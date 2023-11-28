@@ -13,10 +13,11 @@ const checkLogin = async (mail, contrasena) => {
   }
 };
 
-const crearUser = async (nombre, apellido, mail, contrasena) => {
+const crearUser = async (usuarioNuevo) => {
   try {
     const [creado] = await connection.query(
-      `INSERT INTO user (name, lastname, email, password) VALUES ('${nombre}','${apellido}','${mail}','${contrasena}');`
+        'INSERT INTO USER SET ?;', usuarioNuevo
+     // `INSERT INTO user (name, lastname, email, password) VALUES ('${nombre}','${apellido}','${mail}','${contrasena}');`
     );
     return creado;
   } catch (error) {

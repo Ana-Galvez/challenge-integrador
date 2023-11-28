@@ -10,7 +10,7 @@ const authController = {
     const [verificado] = await user.checkLogin(mail, contrasena);
     if (verificado !== undefined) {
       console.log("paso el login");
-      res.redirect("/home");
+      res.redirect("/admin");
       //res.render("login", { title: "LOGIN | FUNKOSHOP" })
     } else {
       res.redirect("/?error=1");
@@ -20,13 +20,19 @@ const authController = {
     res.render("register", { title: "REGISTRARSE| FUNKOSHOP" }),
 
   register_post: async (req, res) => {
-    const { nombre, apellido, mail, contrasena } = req.body;
-    console.log(`hola ${nombre}`);
+    // const { nombre, apellido, mail, contrasena } = req.body;
+    const usuarioNuevo = {
+      name: req.body.nombre,
+      lastname: req.body.apellido,
+      email: req.body.mail,
+      password: req.body.contrasena
 
-    const [creado] = await user.crearUser(`'${nombre}', '${apellido}', '${mail}', '${contrasena}'`);
-    console.log(nombre);
+    } 
+
+    const creado = await user.crearUser(usuarioNuevo);
+  
     if (creado !== undefined) {
-      console.log("paso la query");
+      res.redirect("/home");
     }
   },
 
