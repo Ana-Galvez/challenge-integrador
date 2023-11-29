@@ -8,7 +8,7 @@
       <h1 class="admin-title">EDITAR ITEM</h1>
       <% products.forEach ((product)=>{ %>
         <% if  (product.product_id==id) { %>
-      <form action="/admin/edit/<%= products.product_id %>?_method=PUT" method="post" enctype="multipart/form-data">
+      <form action="/admin/edit/<%= product.product_id %>?_method=PUT" method="post" enctype="multipart/form-data">
 
         <section class="categoria-licencia spacing-36">
           <label for="categoria">Categoría: </label>
