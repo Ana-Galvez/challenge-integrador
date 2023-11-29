@@ -25,7 +25,13 @@ const adminController = {
       id,
     });
   },
-  editID_put: (req, res) => res.render("edit", { title: "EDITAR| FUNKOSHOP" }),
+  editID_put: (req, res) => {
+    
+    //por el momento dejo esto para que no tire error, hasta llamar a la bbdd
+    const id = req.params.id;
+    const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
+    const product = JSON.parse(fileJson);
+    res.render("edit",{title:"EDITAR PRODUCTO| FUNKOSHOP", products:product,id})},
   editID_delete: (req, res) =>
     res.render("delete", { title: "BORRAR | FUNKOSHOP" }),
 };
