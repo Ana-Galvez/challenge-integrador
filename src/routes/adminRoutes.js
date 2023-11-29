@@ -5,13 +5,6 @@ const uploadfile = require('../middlewares/upload')
 const validateInput = require('../middlewares/validador')
 const {body} = require('express-validator')
 
-const adminController = require("../controllers/adminController")
-const express =  require('express');
-const router = express.Router();
-const uploadfile = require('../middlewares/upload') 
-const validateInput = require('../middlewares/validador')
-const {body} = require('express-validator')
-
 const createAndEditValidation = [
   body('categoria')
     .notEmpty()
