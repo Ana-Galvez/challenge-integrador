@@ -23,8 +23,20 @@ const getLicence = async () => {
 }
 
 
+const deleteItem = async (id) =>{
+try {
+  const [rows] = await connection.query(`DELETE * FROM product  WHERE product_id = ${id};`)
+  return rows
+} catch (error) {
+  throw error
+}finally{
+  connection.releaseConnection()
+}
+}
+
 
 module.exports= {
   getProducts,
-  getLicence
+  getLicence,
+  deleteItem
 }

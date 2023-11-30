@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include ('partials/head.ejs') %>
+  <body>
+    <%- include ('partials/headerAdmin.ejs') %>
+
+    <main class="container margenes-arriba-abajo36 ancho">
+      <h1 class="admin-title">BORRAR ITEM</h1>
+      <% products.forEach ((product)=>{ %>
+        <% if  (product.product_id==id) { %>
+      <form action="/admin/edit/<%= product.product_id %>?_method=DELETE" method="post" enctype="multipart/form-data">
+
+        <table class="admin__table">
+          <thead class="admin__table__head">
+            <tr>
+              <th>ID</th>
+              <th>Código</th>
+              <th>Nombre del Producto</th>
+              <th>Categoría</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach((product)=> { %>
+            <tr>
+              <td><%= product.product_id %></td>
+              <td><%= product.sku %></td>
+              <td><%= product.product_name %></td>
+              <td><%= product.licence_name %></td>
+              <td>
+                <a href="/admin/edit/<%= product.product_id %>"
+                  ><img
+                    class="button__edit"
+                    src="/img/icons/edit_pencil.svg"
+                    alt="Editar"
+                /></a>
+              </td>
+              <td>
+                <!-- VER EL HREF QUE TIENE 2 // -->
+                <a href="/admin/delete/<%= product.product_id %>"
+                  ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
+                /></a>
+              </td>
+              <% }) %>
+            </tr>
+            <!-- <tr>
+              <td>1</td>
+              <td>STW001001</td>
+              <td>Baby Yoda Blueball</td>
+              <td>STAR WARS</td>
+              <td>
+                <a href="/edit"
+                  ><img
+                    class="button__edit"
+                    src="/img/icons/edit_pencil.svg"
+                    alt="Editar"
+                /></a>
+              </td>
+              <td>
+                <a href=""
+                  ><img src="/img/icons/delete_trash.svg" alt="Eliminar"
+                /></a>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <!-- <section class="categoria-licencia spacing-36">
+          <label for="categoria">Categoría: </label>
+          <select name="categoria" id="categoria">
+            <option><%= product.category_name %></option>
+          </select>
+          <label for="licencia">Licencia: </label>
+          <select name="licencia" id="licencia">
+            <option><%= product.licence_name %></option>
+          </select>
+        </section>
+        <div class="datos-form">
+          <section class="spacing-36"> 
+            <label for="nombre_producto">Nombre del producto: </label>
+            <input type="text" name="nombre_producto" id="nombre_producto" value="<%= product.product_name %>">
+          </section>
+          <section class="spacing-36">
+            <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"><%= product.product_description %></textarea>
+          </section>
+          <section class="sector-sku-descuento margin-sku">
+            <label for="sku">SKU: </label>
+            <input type="text" name="sku" id="sku" size="12" value="<%= product.sku %>">
+            <label for="precio">Precio: </label>
+            <input type="text" name="precio" id="precio" size="12" value="$<%= product.price %>">
+            <label for="stock">Stock: </label>
+            <input class="center" type="text" name="stock" id="stock" size="5" value="<%= product.stock %>">
+          </section>
+          <section class="sector-sku-descuento margin-descuento">
+            <label for="descuento">Descuento: </label>
+            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.dues %>%">
+            <label for="cuotas">Cuotas: </label>
+            <select name="cuotas" id="cuotas">
+              <option>Sin cuotas</option>
+              <option>3 Cuotas sin interés</option>
+              <option>6 Cuotas sin interés</option>
+              <option>9 Cuotas sin interés</option>
+              <option>12 Cuotas sin interés</option>
+              <option>18 Cuotas sin interés</option>
+              <option>24 Cuotas sin interés</option>
+            </select>
+          </section>
+          <section class="spacing-36">
+            <label for="imagenes">Imágenes: </label>
+            <input type="file" name="imagenes" id="imagenes" multiple>
+          </section>
+        </div>
+        <section class="edit-imagenes">
+          <picture class="spacing-36">
+            <section>
+              <img class="edit-margen-imagenes" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
+              <figcaption>Frente</figcaption>
+            </section>
+            <section>
+              <img src="/img<%= product.image_back %>" alt="<%= product.product_description %>">
+              <figcaption>Dorso</figcaption>
+            </section>
+          </picture>
+        </section> -->
+        
+        <section class="button-create-edit">
+          <button type="submit">ELIMINAR Producto</button>
+        </section>
+        <% } %>
+        <% }) %>
+      </form>
+    </main>
+    <%- include ('partials/footerAdmin.ejs') %>
+  </body>
+</html>
