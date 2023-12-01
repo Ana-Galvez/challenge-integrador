@@ -59,8 +59,5 @@ try {
 
 module.exports= {
   getProducts,
-  getLicence,
-  getCategories,
-  getProductsLimit,
-  deleteItem
+  getLicence
 }
