@@ -24,7 +24,18 @@ const getProductsLimit = async () => {
 
 const getLicence = async () => {
   try {
-    const [rows] = await connection.query('SELECT * FROM licence')
+    const [rows] = await connection.query('SELECT * FROM licence;')
+    return rows
+  } catch (error) {
+    throw error
+  }finally{
+    connection.releaseConnection()
+  }
+}
+
+const getCategories = async () => {
+  try {
+    const [rows] =await connection.query('SELECT * FROM category;')
     return rows
   } catch (error) {
     throw error
@@ -49,6 +60,7 @@ try {
 module.exports= {
   getProducts,
   getLicence,
+  getCategories,
   getProductsLimit,
   deleteItem
 }
