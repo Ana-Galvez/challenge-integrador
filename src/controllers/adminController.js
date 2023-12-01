@@ -17,8 +17,8 @@ const adminController = {
     res.render("create", { title: "CREAR| FUNKOSHOP",allLicences,allCategories})},
 
   create_post: async(req, res) =>{
-    
-    res.render("create", { title: "CREAR| FUNKOSHOP" })
+    console.log(req.body);
+    // res.render("create", { title: "CREAR| FUNKOSHOP" })
   },
   editID_get: async (req, res) => {
     const id = req.params.id;
@@ -36,7 +36,6 @@ const adminController = {
     });
   },
   editID_put: (req, res) => {
-    //por el momento dejo esto para que no tire error, hasta llamar a la bbdd
     const id = req.params.id;
     const fileJson = fs.readFileSync(
       path.join(__dirname, "../../products.json")
@@ -47,6 +46,7 @@ const adminController = {
       products: product,
       id,
     });
+    
   },
   deleteID_get: async (req, res) => {
     const id = req.params.id;

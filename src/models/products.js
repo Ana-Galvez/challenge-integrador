@@ -44,6 +44,16 @@ const getCategories = async () => {
   }
 }
 
+// const newProduct = async () => {
+//   try {
+    
+//   } catch (error) {
+//     throw error
+//   }finally{
+//     connection.releaseConnection();
+//   }
+// }
+
 
 const deleteItem = async (id) =>{
 try {
