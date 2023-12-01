@@ -13,11 +13,17 @@
         <section class="categoria-licencia spacing-36">
           <label for="categoria">Categoría: </label>
           <select name="categoria" id="categoria">
-            <option><%= product.category_name %></option>
+            <option selected disabled><%= product.category_name %></option>
+            <% allCategories.forEach((category)=>{%>
+            <option><%= category.category_name %></option>
+            <% })%>
           </select>
           <label for="licencia">Licencia: </label>
           <select name="licencia" id="licencia">
-            <option><%= product.licence_name %></option>
+            <option selected disabled><%= product.licence_name %></option>
+            <% allLicences.forEach((licence)=>{%>
+              <option><%= licence.licence_name %></option>
+              <% })%>
           </select>
         </section>
         <div class="datos-form">
