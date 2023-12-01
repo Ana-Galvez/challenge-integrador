@@ -11,7 +11,10 @@ const adminController = {
     // const product = JSON.parse(fileJson);
     // res.render("admin",{title:"ADMIN | FUNKOSHOP",products:product})
   },
-  create_get: (req, res) => res.render("create", { title: "CREAR| FUNKOSHOP" }),
+  create_get: async (req, res) => {
+    const allLicences = await modelos.getLicence()
+    const allCategories =await modelos.getCategories()
+    res.render("create", { title: "CREAR| FUNKOSHOP",allLicences,allCategories})},
 
   create_post: (req, res) =>
     res.render("create", { title: "CREAR| FUNKOSHOP" }),
@@ -19,11 +22,15 @@ const adminController = {
   editID_get: async (req, res) => {
     const id = req.params.id;
     const allProducts = await modelos.getProducts();
+    const allLicences = await modelos.getLicence();
+    const allCategories =await modelos.getCategories();
     // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
     // const product = JSON.parse(fileJson);
     res.render("edit", {
       title: "EDITAR| FUNKOSHOP",
       products: allProducts,
+      allCategories,
+      allLicences,
       id,
     });
   },
