@@ -50,22 +50,27 @@ const adminController = {
   deleteID_get: async (req, res) => {
     const id = req.params.id;
     const allProducts = await modelos.getProducts();
+    const allLicences = await modelos.getLicence();
+    const allCategories =await modelos.getCategories();
 
     res.render("delete", {
       title: "BORRAR | FUNKOSHOP",
       products: allProducts,
+      allCategories,
+      allLicences,
       id,
     });
   },
 
   deleteID_delete: async (req, res) => {
-    const id = req.body.id
 
+    const id = req.params.id
+    
     const borrado = await modelos.deleteItem(id)
     if (borrado==!undefined) {
       res.redirect("/admin")
     }
-   
+    res.redirect("/admin")
   },
 };
 

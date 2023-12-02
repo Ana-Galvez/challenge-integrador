@@ -46,7 +46,7 @@ const getCategories = async () => {
 
 const deleteItem = async (id) =>{
 try {
-  const [rows] = await connection.query(`DELETE * FROM product  WHERE product_id = ${id};`)
+  const [rows] = await connection.query(`DELETE FROM product  WHERE product_id = ${id};`)
   return rows
 } catch (error) {
   throw error
