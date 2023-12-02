@@ -29,7 +29,7 @@
         <div class="datos-form">
           <section class="spacing-36"> 
             <label for="nombre_producto">Nombre del producto: </label>
-            <input type="text" name="nombre_producto" id="nombre_producto" value="<%= product.product_name %>">
+            <input type="text" name="nombre_producto" id="nombre_producto" value="<%= product.product_name %>" size="40">
           </section>
           <section class="spacing-36">
             <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"><%= product.product_description %></textarea>
@@ -47,6 +47,12 @@
             <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.dues %>%">
             <label for="cuotas">Cuotas: </label>
             <select name="cuotas" id="cuotas">
+              <% if (product.dues === 0){ %>
+                <option selected disabled>Sin Cuotas</option>
+              <% } %>
+              <% if (product.dues !== 0){ %>
+                <option selected disabled><%= product.dues %> Cuotas sin interés</option>
+              <% } %>
               <option>Sin cuotas</option>
               <option>3 Cuotas sin interés</option>
               <option>6 Cuotas sin interés</option>
