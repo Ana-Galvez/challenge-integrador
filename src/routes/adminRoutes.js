@@ -6,12 +6,12 @@ const validateInput = require('../middlewares/validador')
 const {body} = require('express-validator')
 
 const createAndEditValidation = [
-  body('categoria')
-    .notEmpty()
-    .withMessage('Debe seleccionar una opción'),
-  body('licencia')
-    .notEmpty()
-    .withMessage('Debe seleccionar una opción'),
+  // body('categoria')
+  //   .notEmpty()
+  //   .withMessage('Debe seleccionar una opción'),
+  // body('licencia')
+  //   .notEmpty()
+    // .withMessage('Debe seleccionar una opción'),
   body('nombre_producto')
     .notEmpty()
     .withMessage('El campo no debe estar vacío'),

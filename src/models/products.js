@@ -44,15 +44,16 @@ const getCategories = async () => {
   }
 }
 
-// const newProduct = async () => {
-//   try {
-    
-//   } catch (error) {
-//     throw error
-//   }finally{
-//     connection.releaseConnection();
-//   }
-// }
+const newProduct = async (data) => {
+  try {
+    const [rows] = await connection.query('INSERT INTO product SET ?;', data);
+    return rows;
+  } catch (error) {
+    throw error
+  }finally{
+    connection.releaseConnection();
+  }
+}
 
 
 const deleteItem = async (id) =>{
@@ -72,5 +73,6 @@ module.exports= {
   getLicence,
   getProductsLimit,
   getCategories,
+  newProduct,
   deleteItem
 }
