@@ -55,6 +55,20 @@ const newProduct = async (data) => {
   }
 }
 
+const editProduct = async(itemEdit,id) => {
+  try {
+    const [rows] = await connection.query(`UPDATE product SET ${itemEdit} WHERE product_id = ${id};`)
+    return rows;
+  } catch (error) {
+    throw error
+  }finally{
+    connection.releaseConnection();
+  }
+
+
+
+}
+
 const deleteItem = async (id) =>{
 try {
   const [rows] = await connection.query(`DELETE FROM product  WHERE product_id = ${id};`)
@@ -73,5 +87,6 @@ module.exports= {
   getProductsLimit,
   getCategories,
   newProduct,
+  editProduct,
   deleteItem
 }

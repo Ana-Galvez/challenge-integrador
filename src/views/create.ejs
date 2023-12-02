@@ -13,7 +13,7 @@
         <select name="categoria" id="categoria">
           <option disabled selected>Seleccionar</option>
           <% allCategories.forEach((category)=>{%>
-          <option><%= category.category_name %></option>
+          <option value= <%= category.category_id %>><%= category.category_name %> </option>
           <!-- <option>Figuras Coleccionables</option>
           <option>Remeras</option>
           <option>Llaveros</option> -->
@@ -23,7 +23,7 @@
         <select name="licencia" id="licencia">
           <option disabled selected>Seleccionar</option>
           <% allLicences.forEach((licence)=>{%>
-          <option><%= licence.licence_name %></option>
+          <option value=<%= licence.licence_id %> ><%= licence.licence_name %></option>
           <!-- <option>Naruto Shippuden</option>
           <option>Naruto Shippuden</option>
           <option>Naruto Shippuden</option> -->
