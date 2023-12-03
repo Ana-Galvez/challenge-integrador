@@ -57,7 +57,7 @@ const newProduct = async (data) => {
 
 const editProduct = async(itemEdit,id) => {
   try {
-    const [rows] = await connection.query(`UPDATE product SET ${itemEdit} WHERE product_id = ${id};`)
+    const [rows] = await connection.query('UPDATE product SET ? WHERE product_id = ?;', itemEdit,id )
     return rows;
   } catch (error) {
     throw error

@@ -10,7 +10,7 @@
         <% if  (product.product_id==id) { %>
           <input name="id" type="hidden" value=<%= product.product_id %> >
       <form action="/admin/edit/<%= product.product_id %>?_method=PUT" 
-        method="put"
+        method="POST"
         enctype="multipart/form-data">
 
         <section class="categoria-licencia spacing-36">
@@ -18,14 +18,14 @@
           <select name="categoria" id="categoria">
             <option selected disabled><%= product.category_name %></option>
             <% allCategories.forEach((category)=>{ %>
-            <option><%= category.category_name %></option>
+            <option value=<%= category.category_id %>><%= category.category_name %></option>
             <% }) %>
           </select>
           <label for="licencia">Licencia: </label>
           <select name="licencia" id="licencia">
             <option selected disabled><%= product.licence_name %></option>
             <% allLicences.forEach((licence)=>{ %>
-            <option><%= licence.licence_name %></option>
+            <option value=<%= licence.licence_id %>><%= licence.licence_name %></option>
             <% }) %>
           </select>
         </section>

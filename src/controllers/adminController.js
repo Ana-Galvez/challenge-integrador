@@ -1,5 +1,6 @@
 const modelos = require("../models/products.js");
 const fs = require("fs");
+const e = require("method-override");
 const path = require("path");
 
 const adminController = {
@@ -69,19 +70,38 @@ const adminController = {
       id,
     });
   },
-  editID_put: (req, res) => {
-    //por el momento dejo esto para que no tire error, hasta llamar a la bbdd
-    const id = req.params.id;
-    const fileJson = fs.readFileSync(
-      path.join(__dirname, "../../products.json")
-    );
-    const product = JSON.parse(fileJson);
-    res.render("edit", {
-      title: "EDITAR PRODUCTO| FUNKOSHOP",
-      products: product,
-      id,
-    });
+  editID_put: async (req, res) => {
+    const allProducts = await modelos.getProducts();
+    const allLicences = await modelos.getLicence();
+    const allCategories = await modelos.getCategories();
+    const year = Date.now().toString;
+    const data = {
+      // category_name : req.body.categoria,
+      // licence_name: req.body.licencia,
+      product_name: req.body.nombre_producto,
+      product_description: req.body.detalle_producto,
+      sku: req.body.sku,
+      price: req.body.precio,
+      stock: req.body.stock,
+      discount: req.body.descuento,
+      dues: req.body.cuotas,
+      image_front: "/" + req.files[0].filename,
+      image_back: "/" + req.files[1].filename,
+      create_time: year,
+      licence_id: req.body.licencia,
+      category_id: req.body.categoria,
+    };
+    console.log(data);
+    const id = req.body.id;
+    const editProduct = await modelos.editProduct(data, id);
+    if (editProduct == !undefined) {
+      res.redirect("/home");
+    }
+    res.redirect("/admin");
   },
+    
+  
+
   deleteID_get: async (req, res) => {
     const id = req.params.id;
     const allProducts = await modelos.getProducts();
