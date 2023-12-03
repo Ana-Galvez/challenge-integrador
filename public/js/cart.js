@@ -49,5 +49,6 @@ subtract.addEventListener('click', () => {
 
 borrar.addEventListener('click', () => {
   divCadaProducto.style.display = "none";
+  contadorHeader.textContent = cantProductos.value = 0;
+  dataResumen(precio_produc, precioUnitario, cantProductos, cantProductosResumen, subtotalResumen, totalResumen, envio);
 })
-

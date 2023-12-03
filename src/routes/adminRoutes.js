@@ -33,14 +33,21 @@ const createAndEditValidation = [
   body('cuotas')
     .notEmpty()
     .withMessage('El campo no debe estar vacío'),
+    body('licencia')
+    .notEmpty()
+    .withMessage('El campo no debe estar vacío'),
+    body('categoria')
+    .notEmpty()
+    .withMessage('El campo no debe estar vacío'),
 ]
 
 router.get("/",adminController.admin_get); // vista admin
 router.get("/create",adminController.create_get); // vista crear
-router.post("/create", uploadfile.array('imagenes',2),adminController.createAndEditValidation,validateInput,adminController.create_post); // vista creado
+router.post("/create", uploadfile.array('imagenes',2),createAndEditValidation,validateInput,adminController.create_post); // vista creado
 router.get("/edit/:id", adminController.editID_get); // vistA editar
-router.put("/edit/:id",uploadfile.array('imagenes',2),createAndEditValidation,validateInput,adminController.editID_put); // vista editado 
-router.delete("/delete/:id", adminController.editID_delete);
+router.put("/edit/:id",uploadfile.array('imagenes',2),adminController.editID_put); // vista editado 
+router.get("/delete/:id", adminController.deleteID_get);
+router.delete("/delete/:id", adminController.deleteID_delete);
 
 module.exports = router;
 
