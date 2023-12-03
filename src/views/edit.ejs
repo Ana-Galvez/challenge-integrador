@@ -41,28 +41,28 @@
             <label for="sku">SKU: </label>
             <input type="text" name="sku" id="sku" size="12" value="<%= product.sku %>">
             <label for="precio">Precio: </label>
-            <input type="text" name="precio" id="precio" size="12" value="$<%= product.price %>">
+            <input type="text" name="precio" id="precio" size="12" value="<%= product.price %>">
             <label for="stock">Stock: </label>
             <input class="center" type="text" name="stock" id="stock" size="5" value="<%= product.stock %>">
           </section>
           <section class="sector-sku-descuento margin-descuento">
             <label for="descuento">Descuento: </label>
-            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.discount %>%">
+            <input class="center" type="text" name="descuento" id="descuento" size="5" value="<%= product.discount %>">
             <label for="cuotas">Cuotas: </label>
             <select name="cuotas" id="cuotas">
               <% if (product.dues === 0){ %>
-                <option selected disabled>Sin Cuotas</option>
+                <option selected disabled value="<%= product.dues %>">Sin Cuotas</option>
               <% } %>
               <% if (product.dues !== 0){ %>
-                <option selected disabled><%= product.dues %> Cuotas sin interés</option>
+                <option selected disabled value="<%= product.dues %>"><%= product.dues %> Cuotas sin interés</option>
               <% } %>
-              <option>Sin cuotas</option>
-              <option>3 Cuotas sin interés</option>
-              <option>6 Cuotas sin interés</option>
-              <option>9 Cuotas sin interés</option>
-              <option>12 Cuotas sin interés</option>
-              <option>18 Cuotas sin interés</option>
-              <option>24 Cuotas sin interés</option>
+              <option value="0">Sin cuotas</option>
+              <option value="3">3 Cuotas sin interés</option>
+              <option value="6">6 Cuotas sin interés</option>
+              <option value="9">9 Cuotas sin interés</option>
+              <option value="12">12 Cuotas sin interés</option>
+              <option value="18">18 Cuotas sin interés</option>
+              <option value="24">24 Cuotas sin interés</option>
             </select>
           </section>
           <section class="spacing-36">
