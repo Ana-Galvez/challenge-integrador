@@ -72,10 +72,9 @@ const adminController = {
   },
   editID_put: async (req, res) => {
     const id = req.params.id;
-    const allProducts = await modelos.getProducts();
-    const allLicences = await modelos.getLicence();
-    const allCategories = await modelos.getCategories();
-    const editProduct = await modelos.editProduct(data, id);
+    // const allProducts = await modelos.getProducts();
+    // const allLicences = await modelos.getLicence();
+    // const allCategories = await modelos.getCategories();
     const year = Date.now().toString;
     const data = {
       // category_name : req.body.categoria,
@@ -94,6 +93,7 @@ const adminController = {
       category_id: req.body.categoria,
     };
     console.log(data);
+    const editProduct = await modelos.editProduct(data, id);
 
     // res.render("edit", {
     //   title: "PRODUCTO MODIFICADO| FUNKOSHOP",
