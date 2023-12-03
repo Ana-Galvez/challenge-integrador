@@ -64,9 +64,6 @@ const editProduct = async(itemEdit,id) => {
   }finally{
     connection.releaseConnection();
   }
-
-
-
 }
 
 const deleteItem = async (id) =>{
