@@ -17,23 +17,23 @@
                 <label for="categoria">Categoría: </label>
                 <select name="categoria" id="categoria">
 
-                  <option value= <%= product.category_id %> > 
+                  <option value=<%=product.category_id %> >
                     <%= product.category_name %>
                   </option>
                   <% allCategories.forEach((category)=>{ %>
                     <option value=<%=category.category_id %>><%= category.category_name %>
                     </option>
-                    <% }) %>
+                  <% }) %>
                 </select>
                 <label for="licencia">Licencia: </label>
                 <select name="licencia" id="licencia">
-                  <option value= <%= product.licence_id %> >
+                  <option value=<%=product.licence_id %> >
                     <%= product.licence_name %>
                   </option>
                   <% allLicences.forEach((licence)=>{ %>
                     <option value=<%=licence.licence_id %>><%= licence.licence_name %>
                     </option>
-                    <% }) %>
+                  <% }) %>
                 </select>
               </section>
               <div class="datos-form">
@@ -62,12 +62,12 @@
                   <select name="cuotas" id="cuotas">
                     <% if (product.dues===0){ %>
                       <option value="<%= product.dues %>">Sin Cuotas</option>
-                      <% } %>
-                        <% if (product.dues !==0){ %>
+                    <% } %>
+                    <% if (product.dues !==0){ %>
                           <option value="<%= product.dues %>">
                             <%= product.dues %> Cuotas sin interés
                           </option>
-                          <% } %>
+                      <% } %>
                             <option value="0">Sin cuotas</option>
                             <option value="3">3 Cuotas sin interés</option>
                             <option value="6">6 Cuotas sin interés</option>
@@ -98,46 +98,13 @@
               <section class="button-create-edit">
                 <button type="submit">Modificar Producto</button>
               </section>
-              <% } %>
-              <% if (product.dues !== 0){ %>
-                <option value="<%= product.dues %>"><%= product.dues %> Cuotas sin interés</option>
-              <% } %>
-              <option value="0">Sin cuotas</option>
-              <option value="3">3 Cuotas sin interés</option>
-              <option value="6">6 Cuotas sin interés</option>
-              <option value="9">9 Cuotas sin interés</option>
-              <option value="12">12 Cuotas sin interés</option>
-              <option value="18">18 Cuotas sin interés</option>
-              <option value="24">24 Cuotas sin interés</option>
-            </select>
-          </section>
-          <section class="spacing-36">
-            <label for="imagenes">Imágenes: </label>
-            <input type="file" name="imagenes" id="imagenes" multiple>
-          </section>
-        </div>
-        <section class="edit-imagenes">
-          <picture class="spacing-36">
-            <section>
-              <img class="edit-margen-imagenes" src="/img<%= product.image_front %>" alt="<%= product.product_description %>">
-              <figcaption>Frente</figcaption>
-            </section>
-            <section>
-              <img src="/img<%= product.image_back %>" alt="<%= product.product_description %>">
-              <figcaption>Dorso</figcaption>
-            </section>
-          </picture>
-        </section>
-        <section class="button-create-edit">
-          <button type="submit">Modificar Producto</button>
-        </section>
-        <% } %>
+            </form>
+          <% } %>
         <% }) %>
-      </form>
-    </main>
-    <%- include ('partials/footerAdmin.ejs') %>
+      </main>
+      <%- include ('partials/footerAdmin.ejs') %>
 
-    <script src="/js/cantImg.js"></script>
+        <script src="/js/cantImg.js"></script>
   </body>
 
 </html>
