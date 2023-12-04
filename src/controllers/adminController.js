@@ -60,6 +60,7 @@ const adminController = {
     const allProducts = await modelos.getProducts();
     const allLicences = await modelos.getLicence();
     const allCategories = await modelos.getCategories();
+    const year = Date.now().toString;
     // const fileJson = fs.readFileSync(path.join(__dirname,"../../products.json"));
     // const product = JSON.parse(fileJson);
     res.render("edit", {
