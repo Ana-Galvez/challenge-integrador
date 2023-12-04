@@ -16,14 +16,15 @@
         <section class="categoria-licencia spacing-36">
           <label for="categoria">Categoría: </label>
           <select name="categoria" id="categoria">
-            <option selected disabled><%= product.category_name %></option>
+
+            <option><%= product.category_name %> </option>
             <% allCategories.forEach((category)=>{ %>
             <option value=<%= category.category_id %>><%= category.category_name %></option>
             <% }) %>
           </select>
           <label for="licencia">Licencia: </label>
           <select name="licencia" id="licencia">
-            <option selected disabled><%= product.licence_name %></option>
+            <option><%= product.licence_name %></option>
             <% allLicences.forEach((licence)=>{ %>
             <option value=<%= licence.licence_id %>><%= licence.licence_name %></option>
             <% }) %>
@@ -35,7 +36,7 @@
             <input type="text" name="nombre_producto" id="nombre_producto" value="<%= product.product_name %>" size="40">
           </section>
           <section class="spacing-36">
-            <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10"><%= product.product_description %></textarea>
+            <textarea name="detalle_producto" id="detalle_producto" cols="30" rows="10" value="<%= product.product_description %>"><%= product.product_description %></textarea>
           </section>
           <section class="sector-sku-descuento margin-sku">
             <label for="sku">SKU: </label>
@@ -51,10 +52,10 @@
             <label for="cuotas">Cuotas: </label>
             <select name="cuotas" id="cuotas">
               <% if (product.dues === 0){ %>
-                <option selected disabled value="<%= product.dues %>">Sin Cuotas</option>
+                <option  value="<%= product.dues %>">Sin Cuotas</option>
               <% } %>
               <% if (product.dues !== 0){ %>
-                <option selected disabled value="<%= product.dues %>"><%= product.dues %> Cuotas sin interés</option>
+                <option value="<%= product.dues %>"><%= product.dues %> Cuotas sin interés</option>
               <% } %>
               <option value="0">Sin cuotas</option>
               <option value="3">3 Cuotas sin interés</option>

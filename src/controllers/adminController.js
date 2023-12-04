@@ -72,9 +72,6 @@ const adminController = {
   },
   editID_put: async (req, res) => {
     const id = req.params.id;
-    // const allProducts = await modelos.getProducts();
-    // const allLicences = await modelos.getLicence();
-    // const allCategories = await modelos.getCategories();
     const year = Date.now().toString;
     const data = {
       // category_name : req.body.categoria,
@@ -86,8 +83,8 @@ const adminController = {
       stock: req.body.stock,
       discount: req.body.descuento,
       dues: req.body.cuotas,
-      image_front: "/" + req.files[0].filename,
-      image_back: "/" + req.files[1].filename,
+      image_front: "/",
+      image_back: "/",
       create_time: year,
       licence_id: req.body.licencia,
       category_id: req.body.categoria,
@@ -102,13 +99,12 @@ const adminController = {
     //   allLicences,
     //   id,
     // });
+
     if (editProduct == !undefined) {
       res.redirect("/home");
     }
     res.redirect("/admin");
   },
-    
-  
 
   deleteID_get: async (req, res) => {
     const id = req.params.id;
