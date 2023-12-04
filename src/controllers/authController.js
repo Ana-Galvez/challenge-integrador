@@ -13,7 +13,7 @@ const authController = {
       res.redirect("/admin");
       //res.render("login", { title: "LOGIN | FUNKOSHOP" })
     } else {
-      res.redirect("/?error=1");
+      res.redirect("register");
     }
   },
   register_get: (req, res) =>
@@ -32,7 +32,9 @@ const authController = {
     const creado = await user.crearUser(usuarioNuevo);
   
     if (creado !== undefined) {
-      res.redirect("/home");
+      res.redirect("login");
+    } else {
+      res.redirect("register");
     }
   },
 
