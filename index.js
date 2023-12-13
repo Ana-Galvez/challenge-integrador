@@ -15,7 +15,7 @@ app.use(express.urlencoded());
 app.use(express.json());
 app.use(methodOverride('_method'))
 
-app.use("/", mainRoutes);
+app.use("/home", mainRoutes);
 app.use("/auth",authRoutes);
 app.use("/admin",adminRoutes);
 app.use("/shop",shopRoutes);
