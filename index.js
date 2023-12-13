@@ -8,7 +8,7 @@ const shopRoutes = require('./src/routes/shopRoutes.js');
 const errorController = require('./src/controllers/errorController.js');
 const app = express();
 
-app.set("views", path.resolve(__dirname + "/src/views")); //__dirname marca la ruta hasta donde está el archivo donde se escribe(index.js)
+app.set("views", path.join(__dirname + "/src/views")); //__dirname marca la ruta hasta donde está el archivo donde se escribe(index.js)
 app.set("view engine", "ejs"); //path.join es para unir en este caso 2 string para que la convierta en una ruta.
 app.use(express.static(path.resolve(__dirname + "/public")));
 app.use(express.urlencoded());
