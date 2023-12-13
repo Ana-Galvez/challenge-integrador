@@ -26,6 +26,6 @@ app.use(errorController.error400);
 app.use(errorController.error403);
 
 app.listen(4000, () => {
-  console.log("Servidor corriendo en http://localhost:4000");
+  console.log("Servidor corriendo en http://localhost:4000/home");
   console.log(__dirname);
 });

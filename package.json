@@ -2,13 +2,13 @@
   "name": "challenge-integrador",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,7 @@
     "express-validator": "^7.0.1",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.6.5"
+    "mysql2": "^3.6.5" 
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
