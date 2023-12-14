@@ -14,12 +14,11 @@ const conn = mysql.createPool({
   database:process.env.DB,
 
 
-  // host: "sql10.freesqldatabase.com",
-  // user: "sql10627826",
-  // database: "sql10627826",
-  // password: "YH6I5nV7ny",
-
-  //port: 3307,
+  host: "sql10.freesqldatabase.com",
+  user: "sql10627826",
+  database: "sql10627826",
+  password: "YH6I5nV7ny",
+  port: 3306,
 
 
   /* host:process.env.HOST,
