@@ -1,5 +1,5 @@
 const mysql = require("mysql2");
-// require('dotenv').config({path:'../../.env'});
+//require('dotenv').config({path:'../../.env'});
 
 const conn = mysql.createPool({
   // host: "localhost",
@@ -13,12 +13,24 @@ const conn = mysql.createPool({
   password:process.env.PASS,
   */
 
-  host: "sql10.freesqldatabase.com",
-  user: "sql10627826",
-  database: "sql10627826",
-  password: "YH6I5nV7ny",
+  // host: "sql10.freesqldatabase.com",
+  // user: "sql10627826",
+  // database: "sql10627826",
+  // password: "YH6I5nV7ny",
 
   //port: 3307,
+
+
+  /* host:process.env.HOST,
+  user:process.env.USER,
+  database:process.env.DB,
+  password:process.env.PASS,
+  port:process.env.PORT
+  */
+
+
+
+  //DB: 3306,
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
