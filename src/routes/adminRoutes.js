@@ -33,12 +33,12 @@ const createAndEditValidation = [
   body('cuotas')
     .notEmpty()
     .withMessage('El campo no debe estar vacío'),
-    body('licencia')
+    /*body('licencia')
     .notEmpty()
     .withMessage('El campo no debe estar vacío'),
     body('categoria')
     .notEmpty()
-    .withMessage('El campo no debe estar vacío'),
+    .withMessage('El campo no debe estar vacío'),*/
 ]
 
 router.get("/",adminController.admin_get); // vista admin
