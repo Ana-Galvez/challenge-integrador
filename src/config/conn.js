@@ -3,11 +3,6 @@ const mysql = require("mysql2");
 
 const conn = mysql.createPool({
 
-HOST:"sql10.freesqldatabase.com",
-USER:"sql10627826",
-PASS:"YH6I5nV7ny",
-DB:"sql10627826",
-PORT:3306,
 
   /* host:process.env.HOST,
   user:process.env.USER,
