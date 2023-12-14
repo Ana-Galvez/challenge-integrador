@@ -1,4 +1,5 @@
 const authController = require("../controllers/authController.js");
+const {connection} = require('../config/conn.js')
 const express = require("express");
 const validateInput = require("../middlewares/validador.js");
 const { body } = require("express-validator");
