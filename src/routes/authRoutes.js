@@ -31,7 +31,7 @@ const registerValidation = [
     .withMessage("Correo no válido, verifique")
     .custom(async (value, { req }) => {
       try {
-        const [usuarios] = await conn.query(
+        const [usuarios] = await connection.query(
           `SELECT * FROM user WHERE email = ?`,
           [value]
         );
@@ -55,7 +55,7 @@ const registerValidation = [
     .withMessage("atencion deber ser alfanumerica"),
   body("rep_contrasena").custom((value, { req }) => {
     if (value !== req.body.contrasena) {
-      throw new Error("no son iguales la contraseñas");
+      throw new Error("no son iguales las contraseñas");
     }
     return true;
   }),
