@@ -20,3 +20,19 @@ DB=sql10627826
 
 
 DEBEN CREAR A LA MISMA ALTURA QUE .gitignore  el archivo .env
+
+.custom((value, {req}) => {
+			return new Promise(async (resolve, reject) => {
+				try {
+					const [usuarioExiste] = await conn.query(`SELECT * FROM user WHERE email = '${value}'`)
+					if(!usuarioExiste){
+						return reject()
+					} else {
+						return resolve()
+					}
+				} catch (error) {
+					console.log(error)
+				}
+			})
+		})
+	  .withMessage("Email ya registrado, por favor ingrese otra direccion"),

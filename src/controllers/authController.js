@@ -21,6 +21,9 @@ const authController = {
 
   register_post: async (req, res) => {
     // const { nombre, apellido, mail, contrasena } = req.body;
+
+
+    
     const usuarioNuevo = {
       name: req.body.nombre,
       lastname: req.body.apellido,
