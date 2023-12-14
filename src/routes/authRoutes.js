@@ -46,7 +46,6 @@ const registerValidation = [
       }
     })
     .withMessage("Email ya registrado, por favor ingrese otra dirección"),
-
   body("contrasena")
     .notEmpty()
     .withMessage("no puede estar vacio")
