@@ -8,7 +8,7 @@ const router = express.Router();
 const loginValidation = [
   body("mail").isEmail().withMessage("Correo no válido, verifique"),
   body("contrasena")
-    .isLength({ min: 6 })
+    .isLength({ min: 6   })
     .isAlphanumeric()
     .withMessage("Contraseña mínima 8 caracteres con letras y números"),
 ];
