@@ -105,7 +105,7 @@ const adminController = {
 
     if (editProduct == !undefined) {
       res.redirect("/home");
-    }
+    }else{
     res.redirect("/admin");
   },
 
