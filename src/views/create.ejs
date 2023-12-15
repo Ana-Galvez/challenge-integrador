@@ -7,13 +7,13 @@
 
   <main class="container margenes-arriba-abajo36 ancho" id="main-create">
     <h1 class="admin-title">CREAR NUEVO ITEM</h1>
-    <form action="/admin/create" method="post" enctype="multipart/form-data"> 
+    <form action="/admin/create" method="post" enctype="application/x-www-form-urlencoded"> 
       <section class="categoria-licencia spacing-36">
         <label for="categoria">Categoría: </label>
         <select name="categoria" id="categoria">
           <option disabled selected>Seleccionar</option>
           <% allCategories.forEach((category)=>{%>
-          <option value= <%= category.category_id %>><%= category.category_name %> </option>
+          <option value= "<%= category.category_id %>"><%= category.category_name %> </option>
           <!-- <option>Figuras Coleccionables</option>
           <option>Remeras</option>
           <option>Llaveros</option> -->
@@ -23,7 +23,7 @@
         <select name="licencia" id="licencia">
           <option disabled selected>Seleccionar</option>
           <% allLicences.forEach((licence)=>{%>
-          <option value=<%= licence.licence_id %> ><%= licence.licence_name %></option>
+          <option value="<%= licence.licence_id %>" ><%= licence.licence_name %></option>
           <!-- <option>Naruto Shippuden</option>
           <option>Naruto Shippuden</option>
           <option>Naruto Shippuden</option> -->
