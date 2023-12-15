@@ -107,7 +107,8 @@ const adminController = {
       res.redirect("/home");
     }else{
     res.redirect("/admin");
-  },
+    }
+  }
 
   deleteID_get: async (req, res) => {
     const id = req.params.id;
@@ -130,7 +131,7 @@ const adminController = {
     const borrado = await modelos.deleteItem(id);
     if (borrado == !undefined) {
       res.redirect("/admin");
-    }
+    }else{
     res.redirect("/admin");
   },
 };
