@@ -108,7 +108,7 @@ const adminController = {
     }else{
     res.redirect("/admin");
     }
-  }
+  };
 
   deleteID_get: async (req, res) => {
     const id = req.params.id;
@@ -123,7 +123,7 @@ const adminController = {
       allLicences,
       id,
     });
-  },
+  };
 
   deleteID_delete: async (req, res) => {
     const id = req.params.id;
