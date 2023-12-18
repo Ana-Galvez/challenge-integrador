@@ -32,7 +32,7 @@ const conn = mysql.createPool({
 
   //DB: 3306,
   waitForConnections: true,
-  connectionLimit: 10,
+  connectionLimit: 20,
   queueLimit: 0,
 });
 

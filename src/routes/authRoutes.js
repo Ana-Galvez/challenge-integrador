@@ -62,9 +62,10 @@ const registerValidation = [
   }),
 ];
 
-router.get("/login", authController.login_get);
+router.get("/login",  authController.login_get);
+
 router.post(
-  "/login",
+  "/login", 
   loginValidation,
   validateInput,
   authController.login_post

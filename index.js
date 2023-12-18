@@ -7,6 +7,20 @@ const adminRoutes = require('./src/routes/adminRoutes.js');
 const shopRoutes = require('./src/routes/shopRoutes.js');
 const errorController = require('./src/controllers/errorController.js');
 const app = express();
+const session = require('express-session');
+
+app.use(session({
+  secret: "4n4-M4c4-3du",
+  resave: false,
+  saveUninitialized: false
+}))
+
+const isLogged = (req, res, next) =>{
+  if(!req.session.userid){
+    return res.redirect('/auth/login')
+  }
+  next()
+}
 
 app.set("views", path.join(__dirname + "/src/views")); //__dirname marca la ruta hasta donde está el archivo donde se escribe(index.js)
 app.set("view engine", "ejs"); //path.join es para unir en este caso 2 string para que la convierta en una ruta.
@@ -17,7 +31,7 @@ app.use(methodOverride('_method'))
 
 app.use("/", mainRoutes);
 app.use("/auth",authRoutes);
-app.use("/admin",adminRoutes);
+app.use("/admin", isLogged, adminRoutes);
 app.use("/shop",shopRoutes);
 
 app.use(errorController.error404);

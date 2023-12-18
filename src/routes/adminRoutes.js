@@ -41,7 +41,9 @@ const createAndEditValidation = [
     .withMessage('El campo no debe estar vacío'),*/
 ]
 
-router.get("/",adminController.admin_get); // vista admin
+
+
+router.get("/", adminController.admin_get); // vista admin
 router.get("/create",adminController.create_get); // vista crear
 router.post("/create",/* uploadfile.array('imagenes',2),*/createAndEditValidation,validateInput,adminController.create_post); // vista creado
 router.get("/edit/:id", adminController.editID_get); // vistA editar
